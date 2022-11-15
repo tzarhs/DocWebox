@@ -120,5 +120,6 @@
         }
     }
 
-    
+    mysqli_close($link);
+
 ?>
