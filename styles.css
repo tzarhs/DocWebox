@@ -1,0 +1,29 @@
+body {
+    background-image: url('wallpaper.jpg');
+    text-align: left;
+}
+
+h1{
+    color: black;
+    margin: 100px;
+    font-size: 50px;
+}
+form{
+    margin: 100px;
+}
+label{
+    color:black;
+    font-size: 25px;
+}
+
+button{
+    background-color:black;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 30px;
+  }
