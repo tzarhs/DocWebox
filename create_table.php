@@ -1,7 +1,6 @@
 <?php
     include("connect.php");
 
-<<<<<<< HEAD
     if(mysqli_query($link,"DESCRIBE usertype")){
         //Ο πίνακας υπάρχει ήδη
 	}
@@ -18,22 +17,7 @@
 			echo "Πρόβλημα στη δημιουργία του πίνακα data: ".$link->error."<br/>";
 		}
     }
-    
-
-    if(mysqli_query($link,"DESCRIBE login")){
-        //Ο πίνακας υπάρχει ήδη
-	}
-    else {
-        $sql="CREATE TABLE IF NOT EXISTS login(id INT(100) AUTO_INCREMENT PRIMARY KEY, username VARCHAR(60) NOT NULL, password VARCHAR(60) NOT NULL, user_type VARCHAR(60) NOT NULL";
-        if($link->query($sql)===TRUE){
-        echo("Δημιουργήθηκε ο πίνακας login!");
-        }
-        else{
-			echo "Πρόβλημα στη δημιουργία του πίνακα login: ".$link->error."<br/>";
-		}
-    }
-    mysqli_close($link);
-=======
+   
 
     // Έλεγχος αν υπάρχει ο πίνακας profession
     if(mysqli_query($link,"DESCRIBE  profession ")){
@@ -71,12 +55,23 @@
              mysqli_query($link, "INSERT INTO profession (name) VALUES ('Ψυχίατρος')");
              mysqli_query($link, "INSERT INTO profession (name) VALUES ('Ωτορινολαρυγγολόγος')");
              echo "ΔΗΜΙΟΥΡΓΗΘΗΚΕ!<br/>";
-             $tablescount++;
         } else {
             echo "Πρόβλημα στη δημιουργία του πίνακα profession: " . $link->error . "<br/>";
         }
     } 
 
+    if(mysqli_query($link,"DESCRIBE login")){
+        //Ο πίνακας υπάρχει ήδη
+	}
+    else {
+        $sql="CREATE TABLE IF NOT EXISTS login (id INT(100) AUTO_INCREMENT PRIMARY KEY, username VARCHAR(60) NOT NULL, password VARCHAR(60) NOT NULL, user_type VARCHAR(60) NOT NULL)";
+        if($link->query($sql)===TRUE){
+        echo("Δημιουργήθηκε ο πίνακας login!");
+        }
+        else{
+			echo "Πρόβλημα στη δημιουργία του πίνακα login: ".$link->error."<br/>";
+		}
+    }
+
     
->>>>>>> fa4a5b5889f9bbf9c5e9357de6a2ee74655073c5
 ?>
