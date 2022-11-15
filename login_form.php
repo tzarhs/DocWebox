@@ -14,8 +14,8 @@
         <input type="text" id="fname" name="fname"><br><br>
         <label for="fname">Last name:</label>
         <input type="text" id="lname" name="lname"><br><br>
-        <input type="submit" value="Submit">
-</form>
+        <button type="button">ΣΥΝΔΕΣΗ</button>
+    </form>
         
     
 </body>
