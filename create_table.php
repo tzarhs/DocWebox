@@ -1,7 +1,7 @@
 <?php
 	include('connect.php');
 
-    //$link = mysqli_connect("localhost", "root", "", "docwebox");
+
 
 	if(mysqli_query($link,"DESCRIBE patient")){
 
