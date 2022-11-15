@@ -1,7 +1,6 @@
 <?php
     include("connect.php");
 
-<<<<<<< HEAD
     if(mysqli_query($link,"DESCRIBE usertype")){
         //Ο πίνακας υπάρχει ήδη
 	}
@@ -33,7 +32,6 @@
 		}
     }
     mysqli_close($link);
-=======
 
     // Έλεγχος αν υπάρχει ο πίνακας profession
     if(mysqli_query($link,"DESCRIBE  profession ")){
@@ -78,5 +76,4 @@
     } 
 
     
->>>>>>> fa4a5b5889f9bbf9c5e9357de6a2ee74655073c5
 ?>
