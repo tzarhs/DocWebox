@@ -1,8 +1,6 @@
 <?php
 	include('connect.php');
 
-
-
 	if(mysqli_query($link,"DESCRIBE patient")){
 
 	}
