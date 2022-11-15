@@ -1,5 +1,4 @@
 <?php
-<<<<<<< HEAD
 	include('connect.php');
 
 	if(mysqli_query($link,"DESCRIBE patient")){
@@ -35,8 +34,6 @@
 	}
 
 
-	mysqli_close($link);
-=======
     include("connect.php");
 
     if(mysqli_query($link,"DESCRIBE usertype")){
@@ -112,5 +109,4 @@
     }
 
     
->>>>>>> d17d254169d98f2816e94039898256def46205c8
 ?>
