@@ -120,6 +120,7 @@
         }
     }
 
+
     mysqli_close($link);
 
 ?>
