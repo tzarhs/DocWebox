@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <title>DocWebox-Οι καλύτεροι γιατροί στην διάθεση σου!</title>
 </head>
+
 <body>
     <nav>
       <input type="checkbox" id="check">
@@ -24,6 +25,7 @@
       </ul>
     </nav>
 
+<<<<<<< HEAD
     <div class="container">
     <form action="" class="search-bar">
         <input type="text" placeholder="Ειδικότητα" name="profession">
@@ -32,9 +34,28 @@
     </form>
 </div>
     
+=======
+
+    <div class="container">
+        <h1 class="motto">Health is Wealth!</h1></div>
+
+        <div class="footer">
+            <div class="footer-heading footer-1">
+                <a href="#"><h3>DocWebox &copy;2022</h3></a></div>
+            <div class="footer-heading footer-2">
+                <h3>Σχετικά με εμάς</h3>
+                <a href="#">Η Εταιρία μας</a>
+                <a href="#">Η Ομάδα μας</a></div>
+            <div class="footer-heading footer-3">
+                <h3><a href="#">Πολιτική Απορρήτου</a></h3></div>
+            <div class="footer-heading footer-3">
+                <h3><a href="#">Όροι Χρήσης</a></h3></div>
+            </div>
+>>>>>>> 04de7b91fd16248c72107e7be4926dd21c63815c
   </body>
 </html>
 
 <?php
     include("connect.php");
 ?>
+   
