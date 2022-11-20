@@ -1,8 +1,11 @@
 body {  
     font-family: sans-serif;
-    background:rgba(0,8,20,0.7) url('wallpaper.jpg');
+    width:100%;
+    background-image: linear-gradient(rgba(12, 120, 139, 0.9),rgba(0,8,51,0.9)), url(wallpaper.jpg);
+    min-height: 100vh;
+    background-position: center;
     background-size: cover;
-    background-blend-mode: darken ;
+
   }
   
 .box h1{
