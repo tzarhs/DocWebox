@@ -16,7 +16,7 @@
         <i class="fas fa-bars"></i>
       </label>
       <label class="logo">
-        <a href="#"><img src="logo_doctor.png" alt="logo"></a>
+        <a href="index.php"><img src="logo_doctor.png"></a>
       </label>
       <ul>
         <li><a class="active" href="#">Ειδικότητες</a></li>
@@ -33,9 +33,6 @@
     </form>
 </div>
     
-
-    
-
         <div class="footer">
             <div class="footer-heading footer-1">
                 <a href="#"><h3>DocWebox &copy;2022</h3></a></div>
