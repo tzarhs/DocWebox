@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <title>Document</title>
+    <title>DocWebox-Οι καλύτεροι γιατροί στην διάθεση σου!</title>
 </head>
 
 <body>
@@ -25,9 +25,16 @@
       </ul>
     </nav>
 
-
     <div class="container">
-        <h1 class="motto">Health is Wealth!</h1></div>
+    <form action="" class="search-bar">
+        <input type="text" placeholder="Ειδικότητα" name="profession">
+        <input type="text" placeholder="Περιοχή" name="location">
+        <button type="submit"><img src="search.png"></button>
+    </form>
+</div>
+    
+
+    
 
         <div class="footer">
             <div class="footer-heading footer-1">
@@ -40,7 +47,7 @@
                 <h3><a href="#">Πολιτική Απορρήτου</a></h3></div>
             <div class="footer-heading footer-3">
                 <h3><a href="#">Όροι Χρήσης</a></h3></div>
-            </div>
+    </div>
   </body>
 </html>
 
