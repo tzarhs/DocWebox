@@ -4,10 +4,9 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-  }
-  body{
     font-family: sans-serif;
   }
+  
   nav{
     background: #0082e6;
     height: 80px;
