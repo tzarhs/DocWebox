@@ -24,7 +24,7 @@
         <i class="fas fa-bars"></i>
       </label>
       <label class="logo">
-        <a href="#"><img src="logo_doctor.png" alt="logo"></a>
+        <a href="index.php"><img src="logo_doctor.png" alt="logo"></a>
       </label>
       <ul>
         <li><a class="active" href="#">Ειδικότητες</a></li>

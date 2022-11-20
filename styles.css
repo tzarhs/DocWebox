@@ -137,6 +137,7 @@ h1 {
     position: absolute;
     height: auto;
     width: 78px;
+    background-color: transparent;
   }
 
   nav ul{
