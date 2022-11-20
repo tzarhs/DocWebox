@@ -16,11 +16,11 @@
         <i class="fas fa-bars"></i>
       </label>
       <label class="logo">
-        <a href="#"><img src="logo_doctor.png"></a>
+        <a href="index.php"><img src="logo_doctor.png"></a>
       </label>
       <ul>
         <li><a class="active" href="#">Ειδικότητες</a></li>
-        <li><a href="#">Σύνδεση/Εγγραφή</a></li>
+        <li><a href="login.php">Σύνδεση/Εγγραφή</a></li>
         <li><a href="#">Σχετικά με εμάς</a></li>
       </ul>
     </nav>
