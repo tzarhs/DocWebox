@@ -4,8 +4,7 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-<<<<<<< HEAD
-=======
+    font-family: sans-serif;
   }
 
 h1 {
@@ -77,12 +76,6 @@ h1 {
     }
 }
 */
-
-
-  body{
->>>>>>> 04de7b91fd16248c72107e7be4926dd21c63815c
-    font-family: sans-serif;
-  }
  
 
   .container{

@@ -25,7 +25,6 @@
       </ul>
     </nav>
 
-<<<<<<< HEAD
     <div class="container">
     <form action="" class="search-bar">
         <input type="text" placeholder="Ειδικότητα" name="profession">
@@ -34,10 +33,8 @@
     </form>
 </div>
     
-=======
 
-    <div class="container">
-        <h1 class="motto">Health is Wealth!</h1></div>
+    
 
         <div class="footer">
             <div class="footer-heading footer-1">
@@ -50,8 +47,7 @@
                 <h3><a href="#">Πολιτική Απορρήτου</a></h3></div>
             <div class="footer-heading footer-3">
                 <h3><a href="#">Όροι Χρήσης</a></h3></div>
-            </div>
->>>>>>> 04de7b91fd16248c72107e7be4926dd21c63815c
+    </div>
   </body>
 </html>
 
