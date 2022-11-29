@@ -166,19 +166,16 @@ nav ul li a:hover{
   }
  }
 
-<<<<<<< HEAD
   .logo img{
     position: absolute;
     height: auto;
     width: 78px;
     
   }
-=======
 @media (max-width: 858px){
   .checkbtn{
     display: block;
 }
->>>>>>> 9c5ffbbb96930190b112fcd3699ddd95cd67fc57
 
 ul{
   position: fixed;
@@ -208,18 +205,15 @@ a:hover,a.active{
 #check:checked ~ ul{
   left: 0;
   }
-<<<<<<< HEAD
   a.active,a:hover{
     background: #1b9bff;
     transition: .5s;
     
-=======
 }
 
 @media screen and (max-width: 1150px){
   .footer{
       height: 40vh;
->>>>>>> 9c5ffbbb96930190b112fcd3699ddd95cd67fc57
   }
 }
 
@@ -240,4 +234,5 @@ a:hover,a.active{
   .footer-3{
     padding-top: 1rem;
   }
+}
 }
