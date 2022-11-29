@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<<<<<<< HEAD
     
+=======
+>>>>>>> c7571c13dfc937cc2468661754e405b6ffbd5bf6
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,25 +14,20 @@
 </head>
 
 <body>
-
-
     <nav>
       <input type="checkbox" id="check">
       <label for="check" class="checkbtn">
         <i class="fas fa-bars"></i>
       </label>
-      <div class="logo">
+      <label class="logo">
         <a href="index.php"><img src="logo_doctor.png"></a>
-      </div>
+      </label>
       <ul>
         <li><a class="active" href="#">Ειδικότητες</a></li>
         <li><a href="login.php">Σύνδεση/Εγγραφή</a></li>
         <li><a href="#">Σχετικά με εμάς</a></li>
       </ul>
-</nav>
-
-
-
+    </nav>
 
     <div class="container">
     <form action="" class="search-bar">
@@ -38,8 +36,6 @@
         <button type="submit"><img src="search.png"></button>
     </form>
 </div>
-
-</body>
     
         <div class="footer">
             <div class="footer-heading footer-1">
