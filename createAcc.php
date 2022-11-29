@@ -18,12 +18,12 @@
         <div class="wrapper">
             <input type="radio" name="select" id="option-1" checked>
             <input type="radio" name="select" id="option-2">
-             <label for="option-1" class="option option-1">
-                <div class="dot"></div>
+             <label for="option-1" class="option option-1">  
+             <br> 
                 <span>Patient</span>
             </label>
             <label for="option-2" class="option option-2">
-                <div class="dot"></div>
+            <br>
                 <span>Doctor</span>
             </label>
         </div>
