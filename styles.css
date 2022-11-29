@@ -166,12 +166,6 @@ nav ul li a{
 }
 }
 
-  .logo img{
-    position: absolute;
-    height: auto;
-    width: 78px;
-    
-  }
 @media (max-width: 858px){
 .checkbtn{
   display: block;
@@ -203,12 +197,8 @@ color: #0082e6;
 }
   
 #check:checked ~ ul{
-  left: 0;
-  }
-  a.active,a:hover{
-    background: #1b9bff;
-    transition: .5s;
-    
+left: 0;
+}
 }
 
 @media screen and (max-width: 1150px){
@@ -231,8 +221,7 @@ color: #0082e6;
 
 
 @media screen and (max-width: 547px){
-  .footer-3{
-    padding-top: 1rem;
-  }
+.footer-3{
+  padding-top: 1rem;
 }
 }
