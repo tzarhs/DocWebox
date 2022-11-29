@@ -19,10 +19,11 @@ body {
     width: 280px;
     padding: 80px;
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(255, 255, 255, 0.5);
+    /*background: rgba(255, 255, 255, 0.5);*/
+    background:rgba(255,255,255,0.3);
     text-align: center;
     outline: solid;
     outline-color: rgb(34, 119, 136);
@@ -30,9 +31,10 @@ body {
   
   }
   
-.box input[type="text"],.box input[type="password"]{
+  .box input[type="text"],.box input[type="password"]{
   border: 0;
-  background: rgb(255, 255, 255, 0.8);
+  /*background: rgb(255, 255, 255, 0.8);*/
+  background:rgb(255, 255, 255,0.5);
   display: block;
   margin: 20px auto;
   text-align: center;
@@ -40,18 +42,19 @@ body {
   padding: 14px 10px;
   width: 200px;
   outline: none;
-  color:black ;
+  color:rgb(0, 0, 0) ;
   border-radius: 24px;
   transition: 0.25s;
   }
 .box input[type="text"]:focus,.box input[type="password"]:focus{
     width: 280px;
     border-color: rgba(0, 0, 0, 0.5);
+
   }
   
 .box input[type="submit"]{
     border: 0;
-    background: rgb(255, 255, 255,0.8);
+    background: rgb(255, 255, 255,0.5);
     display: block;
     margin: 30px auto;
     text-align: center;
@@ -63,7 +66,7 @@ body {
     border-radius: 24px;
     transition: 0.25s;
   }
-  
+
 .box input[type="submit1"]{
     border: 0;
     background: none;
@@ -72,7 +75,7 @@ body {
     text-align: center;
   
     padding: 10px 10px;
-    width: 130px;
+    width: 155px;
     outline: none;
     color: black ;
     border-radius: 24px;
@@ -82,8 +85,66 @@ body {
     background: #3385bc;
   
   }
+  .box input[type="submit1"]:hover{
+    background: #5199c9;
   
-  /*-----------------------*/
+  }
+
+/*For radio*/
+
+.wrapper{
+
+  display: inline-flex;
+  background:none;
+  height: 10px;
+  width: 300px;
+  align-items: center;
+  justify-content: space-evenly;
+  
+  
+  
+}
+.wrapper .option{
+  background:rgb(255, 255, 255,0.5);
+  height: 250%;
+  width: 300%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0 40px;
+  border: 2px solid rgb(46, 162, 185);
+  transition: all 0.3s ease;
+  text-align: center;
+  border-radius: 24px;
+  
+}
+
+
+input[type="radio"]{
+  display: none;
+  
+}
+#option-1:checked:checked ~ .option-1,
+#option-2:checked:checked ~ .option-2{
+
+  border-color: #304c5e;
+  background: #3385bc;
+}
+
+.wrapper .option span{
+  font-size: 20px;
+  color: #454545; 
+}
+
+#option-1:checked:checked ~ .option-1 span,
+#option-2:checked:checked ~ .option-2 span{
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/*-----------------------*/
   
 *{
     padding: 0;
