@@ -13,36 +13,24 @@
 
 <body>
 
-<nav>
+
     <nav>
       <input type="checkbox" id="check">
       <label for="check" class="checkbtn">
         <i class="fas fa-bars"></i>
       </label>
-<<<<<<< HEAD
       <div class="logo">
-        <a href="index.php"><img src="doctor_logo4.png"></a>
-      </div>
-=======
-      <label class="logo">Αρχική Σελίδα</label>
-      <ul>
-        <li><a class="active" href="#">Ειδικότητες</a></li>
-        <li><a href="#">Σύνδεση/Εγγραφή</a></li>
-        <li><a href="#">Σχετικά με εμάς</a></li>
-      </ul>
-</nav>
-
-<div class="container">
-      <label class="logo">
         <a href="index.php"><img src="logo_doctor.png"></a>
-      </label>
->>>>>>> d71a19644de150f8c69b4270bac2f87d116fddd1
+      </div>
       <ul>
         <li><a class="active" href="#">Ειδικότητες</a></li>
         <li><a href="login.php">Σύνδεση/Εγγραφή</a></li>
         <li><a href="#">Σχετικά με εμάς</a></li>
       </ul>
-    </nav>
+</nav>
+
+
+
 
     <div class="container">
     <form action="" class="search-bar">
