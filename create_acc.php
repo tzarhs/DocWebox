@@ -9,29 +9,6 @@
 </head>
 <body>
 
-<form class="box" mehtod ="post">
-
-        <h1>Sign up</h1>
-        <input type="text"id="email" name="email" placeholder="Email">
-        <input type="text" id="password" name="password" placeholder="Password">
-        <input type="text" id="name" name="name" placeholder="Full name">
-        <div class="wrapper">
-            <input type="radio" name="select" id="option-1" checked>
-            <input type="radio" name="select" id="option-2">
-             <label for="option-1" class="option option-1">  
-             <br> 
-                <span>Patient</span>
-            </label>
-            <label for="option-2" class="option option-2">
-            <br>
-                <span>Doctor</span>
-            </label>
-        </div>
-
-        <input type="submit" value="Sign up">
-        <a href="login.php"><input type="submit1" class="button" value="Already have an account?"></a>
-</form>
-
 <nav>
       <input type="checkbox" id="check">
       <label for="check" class="checkbtn">
@@ -47,10 +24,35 @@
       </ul>
 </nav>
 
+<form action="signup.php" class="box" method ="POST">
+
+        <h1>Sign up</h1>
+
+        <input type="text" id="username" name="username" placeholder="Username">
+        <input type="text" id="password" name="password" placeholder="Password">
+        <input type="text"id="email" name="email" placeholder="Email">
+        <div class="wrapper">
+            <input type="radio" name="select" id="option-1" value="option-1" checked>
+            <input type="radio" name="select" id="option-2" value="option-2">
+             <label for="option-1" class="option option-1">  
+             <br> 
+                <span>Patient</span>
+            </label>
+            <label for="option-2" class="option option-2">
+            <br>
+                <span>Doctor</span>
+            </label>
+        </div>
+
+        <input type="submit" value="Sign up">
+        <a href="login.php"><input type="submit1" class="button" value="Already have an account?"></a>
+</form>
+      
 </body>
 
 </html>
 
 <?php
     include("connect.php");
+
 ?>

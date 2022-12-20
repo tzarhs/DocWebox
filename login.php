@@ -9,15 +9,6 @@
 </head>
 <body>
 
-<form class="box" mehtod ="post">
-
-        <h1>Login</h1>
-        <input type="text" id="username" name="username" placeholder="Username">
-        <input type="text" id="password" name="password" placeholder="Password">
-        <input type="submit" value="Login">
-        <a href="createAcc.php"><input type="submit1" class="button" value="Create a new account"></a>
-</form>
-
 <nav>
       <input type="checkbox" id="check">
       <label for="check" class="checkbtn">
@@ -32,6 +23,15 @@
         <li><a href="#">Σχετικά με εμάς</a></li>
       </ul>
 </nav>
+
+<form class="box" method ="post">
+
+        <h1>Login</h1>
+        <input type="text" id="username" name="username" placeholder="Username">
+        <input type="text" id="password" name="password" placeholder="Password">
+        <input type="submit" value="Login">
+        <a href="create_acc.php"><input type="submit1" class="button" value="Create a new account"></a>
+</form>
 
 </body>
 
