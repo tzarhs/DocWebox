@@ -12,24 +12,23 @@
 <form class="box" mehtod ="post">
 
         <h1>Sign up</h1>
-        <input type="text"id="email" name="email" placeholder="Email">
-        <input type="text" id="password" name="password" placeholder="Password">
-        <input type="text" id="name" name="name" placeholder="Full name">
+        <br> 
         <div class="wrapper">
-            <input type="radio" name="select" id="option-1" checked>
-            <input type="radio" name="select" id="option-2">
-             <label for="option-1" class="option option-1">  
-             <br> 
+            <input type="radio" name="select" id="option1" checked>
+            <input type="radio" name="select" id="option2">
+             <label for="option1" class="option option1">  
                 <span>Patient</span>
             </label>
-            <label for="option-2" class="option option-2">
-            <br>
+            <label for="option2" class="option option2">
                 <span>Doctor</span>
             </label>
         </div>
-
-        <input type="submit" value="Sign up">
-        <a href="login.php"><input type="submit1" class="button" value="Already have an account?"></a>
+        <input type="text" id="name" name="name" placeholder="Full name" required>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <input type="text" id="profession" name="profession" placeholder="Profession" style="display:none" required>
+        <input type="text" id="location" name="location" placeholder="Location" style="display:none" required>
+        <input type="submit" name="submit" value="Sign up">
+        <a id="acc" href="login.php">Already have an account?</a>
 </form>
 
 <nav>
@@ -42,10 +41,15 @@
       </label>
       <ul>
         <li><a class="active" href="#">Ειδικότητες</a></li>
-        <li><a href="#">Σύνδεση/Εγγραφή</a></li>
+        <li><a href="login.php">Σύνδεση/Εγγραφή</a></li>
         <li><a href="#">Σχετικά με εμάς</a></li>
       </ul>
 </nav>
+
+
+<script src="script.js"></script>
+
+
 
 </body>
 
@@ -53,4 +57,6 @@
 
 <?php
     include("connect.php");
+
+    
 ?>
