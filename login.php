@@ -9,17 +9,6 @@
 </head>
 <body>
 
-<form class="box" mehtod ="POST">
-
-        <h1>Login</h1>
-        <input type="text" id="username" name="username" placeholder="Username" required>
-        <input type="password" id="password" name="password" placeholder="Password" required>
-        <input type="submit" name="submit" value="Login">
-        <a id="acc" href="createAcc.php">Create a new account</a>
-
-        
-</form>
-
 <nav>
       <input type="checkbox" id="check">
       <label for="check" class="checkbtn">
@@ -35,11 +24,41 @@
       </ul>
 </nav>
 
+
+
+<form class="box" mehtod ="POST" >
+
+        <h1>Login</h1>
+        <input type="text" id="username" name="username" placeholder="Username" required>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <input type="submit" name="submit" value="Login">
+
+        <a id="acc" href="create_acc.php">Create a new account</a>   
+</form>
+
 <?php
-    include("connect.php");   
- ?>
+$link = mysqli_connect("localhost","root","","docwebox") or die ("No connection");
 
+mysqli_query($link, "SET NAMES utf8 COLLATE utf8_general_ci");
 
+  if (isset( $_REQUEST['submit'])) {
+    $username = mysqli_real_escape_string($link,  $_REQUEST['username']);
+    $password = mysqli_real_escape_string($link,  $_REQUEST['password']);
+    $query = "SELECT * FROM login WHERE username='$username' AND password='$password'";
+
+    $result = mysqli_query($link, $query);
+
+    if (mysqli_num_rows($result) == 1) {
+      session_start();
+      $_SESSION['username'] = $username;
+      header('location: index.php');
+    }else {
+      //echo "Invalid username or password";
+      $error = "Invalid username or password";
+    }
+  }
+
+?>
 
 </body>
 
