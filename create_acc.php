@@ -40,14 +40,15 @@
         </div>
         <input type="text" id="username" name="username" placeholder="Full name" required>
         <input type="password" id="password" name="password" placeholder="Password" required>
-        <script src="script.js">
         <input type="text" id="profession" name="profession" placeholder="Profession" style="display:none" required>
         <input type="text" id="location" name="location" placeholder="Location" style="display:none" required>
-        </script>
         <input type="submit" name="submit" value="Sign up">
 
         <a id="acc" href="login.php">Already have an account?</a>
 </form>
+
+<script src="script.js"></script>
+
 
 
 </body>

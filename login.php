@@ -41,7 +41,6 @@
   include("connect.php");
 
   
-
   if (isset( $_REQUEST['submit'])) {
     $username = mysqli_real_escape_string($link,  $_REQUEST['username']);
     $password = mysqli_real_escape_string($link,  $_REQUEST['password']);
