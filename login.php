@@ -37,9 +37,10 @@
 </form>
 
 <?php
-$link = mysqli_connect("localhost","root","","docwebox") or die ("No connection");
 
-mysqli_query($link, "SET NAMES utf8 COLLATE utf8_general_ci");
+  include("connect.php");
+
+  
 
   if (isset( $_REQUEST['submit'])) {
     $username = mysqli_real_escape_string($link,  $_REQUEST['username']);
