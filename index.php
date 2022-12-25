@@ -26,7 +26,7 @@
     </nav>
 
     <div class="container">
-      <h1>Αναζητήστε τον γιατρό που θέλετε!</h1>
+      <!-- <h1>Αναζητήστε τον γιατρό που θέλετε!</h1> -->
       <form action="search.php" class="search-bar" method="POST">
         <input type="text" placeholder="Ειδικότητα" name="profession">
         <input type="text" placeholder="Περιοχή" name="location">
