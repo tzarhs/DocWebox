@@ -30,7 +30,7 @@
       <form action="search.php" class="search-bar" method="POST">
         <input type="text" placeholder="Ειδικότητα" name="profession">
         <input type="text" placeholder="Περιοχή" name="location">
-        <button type="submit"><img src="search.png"></button>
+        <button type="submit" name="submit"><img src="search.png"></button>
       </form>
     </div>
     

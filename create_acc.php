@@ -24,11 +24,7 @@
       </ul>
 </nav>
 
-<<<<<<< HEAD
-<form action="signup.php" class="box" method ="post">
-=======
 <form action="signup.php" class="box" method ="POST">
->>>>>>> 5fbed0f51a88f028af0119a092c7c6d9384cd1ed
 
         <h1>Sign up</h1>
         <br> 
