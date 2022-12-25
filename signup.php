@@ -1,5 +1,6 @@
 <?php
 include_once 'connect.php';
+  if (isset( $_POST['submit'])) {
 
 $username = $_POST['name'];
 $password = $_POST['password'];
@@ -14,6 +15,7 @@ $usertype = 3;
 
 mysqli_query($link,"INSERT INTO login(name, password, user_type)
         VALUES ('$username', '$password', '$usertype')");
-
+  
 header("Location: index.php?signup=success");
+}
 ?>
