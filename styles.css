@@ -79,6 +79,10 @@ align-items: center;
 justify-content: center;
 }
 
+.container h1{
+  position: top;
+}
+
 .search-bar{
 width:100%;
 max-width: 700px;
@@ -117,17 +121,9 @@ background:#58629b;
 cursor:pointer;
 }
 
-<<<<<<< HEAD
-  label.logo img{
-    position: absolute;
-    height: auto;
-    width: 78px;
-  }
-=======
 .footer-container { 
 padding-bottom: 4rem;
 }
->>>>>>> bccb573e019a4de5c5418200e7bcc5f71ac1c81b
 
 .footer {
 position:relative;
