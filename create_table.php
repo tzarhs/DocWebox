@@ -1,5 +1,5 @@
 <?php
-	include('connect.php');
+	include("connect.php");
 
 	if(mysqli_query($link,"DESCRIBE patient")){
 
@@ -17,7 +17,7 @@
 		}
 	}
    
-    if(mysqli_query($link,"DESCRIBE doctor  ")){
+   if(mysqli_query($link,"DESCRIBE doctor  ")){
 
 	}
 	else{
@@ -31,9 +31,9 @@
 		else{
 			echo "Πρόβλημα στη δημιουργία του πίνακα data: ".$link->error."<br/>";
 		}
-	}
+}
 
-    if(mysqli_query($link,"DESCRIBE usertype")){
+   if(mysqli_query($link,"DESCRIBE usertype")){
         //Ο πίνακας υπάρχει ήδη
 	}
     else {
@@ -48,10 +48,10 @@
         else{
 			echo "Πρόβλημα στη δημιουργία του πίνακα data: ".$link->error."<br/>";
 		}
-    }
+   }
    
 
-    // Έλεγχος αν υπάρχει ο πίνακας profession
+    
     if(mysqli_query($link,"DESCRIBE  profession ")){
         // Αν υπάρχει μην κάνεις τίποτε
     }else{
@@ -93,7 +93,7 @@
     } 
 
     if(mysqli_query($link,"DESCRIBE login")){
-        //Ο πίνακας υπάρχει ήδη
+       
 	}
     else {
         $sql="CREATE TABLE IF NOT EXISTS login (id INT(100) AUTO_INCREMENT PRIMARY KEY, username VARCHAR(60) NOT NULL, password VARCHAR(60) NOT NULL, user_type VARCHAR(60) NOT NULL)";
@@ -103,11 +103,11 @@
         else{
 			echo "Πρόβλημα στη δημιουργία του πίνακα login: ".$link->error."<br/>";
 		}
-    }
+   }
 
     if(mysqli_query($link,"DESCRIBE  appointment")){
-        // Αν υπάρχει μην κάνεις τίποτε
-    }else{
+        
+     }else{
         // Αν δεν υπάρχει δημιούργησέ τον
         echo "Ο πίνακας appointment δεν υπάρχει... ";
         // Δημιουργία πίνακα food
@@ -118,7 +118,7 @@
         } else {
             echo "Πρόβλημα στη δημιουργία του πίνακα appointment: " . $link->error . "<br/>";
         }
-    }
+   }
 
 
     mysqli_close($link);
