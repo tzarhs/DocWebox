@@ -24,7 +24,7 @@
       </ul>
 </nav>
 
-<form acation="signup.php" class="box" mehtod ="post">
+<form action="signup.php" class="box" mehtod ="post">
 
         <h1>Sign up</h1>
         <br> 
