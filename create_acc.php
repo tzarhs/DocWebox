@@ -24,11 +24,7 @@
       </ul>
 </nav>
 
-<<<<<<< HEAD
-<form action="signup.php" class="box" method ="post">
-=======
 <form action="signup.php" class="box" method ="POST">
->>>>>>> 0d547ae7425add8300e70d52ae792f3b14dfeac8
 
         <h1>Sign up</h1>
         <br> 
@@ -44,7 +40,27 @@
         </div>
         <input type="text" id="username" name="username" placeholder="Full name" required>
         <input type="password" id="password" name="password" placeholder="Password" required>
-        <input type="text" id="profession" name="profession" placeholder="Profession" style="display:none" >
+
+          <?php
+              include("connect.php");
+              
+              $sql = "SELECT * FROM profession";
+              $result = mysqli_query($link, $sql);
+              
+              if (mysqli_num_rows($result) > 0) {
+                echo '<select id="profession" name="profession" placeholder="Profession" style="display:none">';
+                echo ' ';
+                while ($row = mysqli_fetch_assoc($result)) {
+                  echo '<option value="' . $row['id'] . '">' . $row['name'] . '</option>';
+                }
+                echo '</select>';
+              } else {
+                echo "No results found.";
+              }
+
+          ?>
+
+     
         <input type="text" id="location" name="location" placeholder="Location" style="display:none" >
         <input type="submit" name="submit" value="Sign up">
 
@@ -59,7 +75,3 @@
 
 </html>
 
-<?php
-    include("connect.php");
-
-?>

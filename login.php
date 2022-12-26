@@ -42,21 +42,25 @@
 
   
   if (isset( $_POST['submit'])) {
-<<<<<<< HEAD
     $username = mysqli_real_escape_string($link,  $_POST['username']);
     $password = mysqli_real_escape_string($link,  $_POST['password']);
-=======
-    $username = mysqli_real_escape_string($link,  $_REQUEST['username']);
-    $password = mysqli_real_escape_string($link,  $_REQUEST['password']);
->>>>>>> 0d547ae7425add8300e70d52ae792f3b14dfeac8
-    $query = "SELECT * FROM login WHERE username='$username' AND password='$password'";
+    
+    $query1 = "SELECT * FROM doctor WHERE doctor_name='$username' AND password='$password'";
+    $result1 = mysqli_query($link, $query1);
 
-    $result = mysqli_query($link, $query);
+    $query2 = "SELECT * FROM patient WHERE name='$username' AND password='$password'";
+    $result2 = mysqli_query($link, $query2);
 
-    if (mysqli_num_rows($result) == 1) {
+    if (mysqli_num_rows($result1) == 1) {
       session_start();
       $_SESSION['username'] = $username;
-      header('location: index.php');
+      header('location: index.php?doctor_login=success');
+
+    }elseif(mysqli_num_rows($result2) == 1){
+      session_start();
+      $_SESSION['username'] = $username;
+      header('location: index.php?patient_login=success');
+
     }else {
       $error = "Invalid username or password";
       echo "<script type='text/javascript'>alert('$error');</script>";
