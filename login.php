@@ -42,8 +42,13 @@
 
   
   if (isset( $_POST['submit'])) {
+<<<<<<< HEAD
     $username = mysqli_real_escape_string($link,  $_POST['username']);
     $password = mysqli_real_escape_string($link,  $_POST['password']);
+=======
+    $username = mysqli_real_escape_string($link,  $_REQUEST['username']);
+    $password = mysqli_real_escape_string($link,  $_REQUEST['password']);
+>>>>>>> 0d547ae7425add8300e70d52ae792f3b14dfeac8
     $query = "SELECT * FROM login WHERE username='$username' AND password='$password'";
 
     $result = mysqli_query($link, $query);

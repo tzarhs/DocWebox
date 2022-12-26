@@ -24,13 +24,17 @@
       </ul>
 </nav>
 
+<<<<<<< HEAD
 <form action="signup.php" class="box" method ="post">
+=======
+<form action="signup.php" class="box" method ="POST">
+>>>>>>> 0d547ae7425add8300e70d52ae792f3b14dfeac8
 
         <h1>Sign up</h1>
         <br> 
         <div class="wrapper">
-            <input type="radio" name="select" id="option1" checked>
-            <input type="radio" name="select" id="option2">
+            <input type="radio" name="select" id="option1" value="option1" checked>
+            <input type="radio" name="select" id="option2" value="option2">
              <label for="option1" class="option option1">  
                 <span>Patient</span>
             </label>
