@@ -44,14 +44,14 @@
   if (isset( $_POST['submit'])) {
     $username = mysqli_real_escape_string($link,  $_REQUEST['username']);
     $password = mysqli_real_escape_string($link,  $_REQUEST['password']);
-    $query = "SELECT * FROM login WHERE username='$username' AND password='$password'";
+    $query = "SELECT * FROM doctor WHERE doctor_name='$username' AND password='$password'";
 
     $result = mysqli_query($link, $query);
 
     if (mysqli_num_rows($result) == 1) {
       session_start();
       $_SESSION['username'] = $username;
-      header('location: index.php');
+      header('location: doctor.php');
     }else {
       //echo "Invalid username or password";
       $error = "Invalid username or password";
@@ -61,9 +61,4 @@
 ?>
 
 </body>
-
-
 </html>
-
-
-

@@ -25,27 +25,12 @@
       </ul>
     </nav>
 
-  <div class="list">
-<?php
-    include("connect.php");
-
-    if(isset($_POST['submit'])){
-        $loc = $_POST['location'];
-        
-        echo "<h1>Doctors List</h1><br><br><br>";
-    $result = mysqli_query($link,"SELECT doctor_name FROM doctor WHERE location='$loc' ");
-        while ($row = mysqli_fetch_array($result)) {
-		      echo "Name:".$row['doctor_name']."<br>";
-          ?>
-          <a href="appointment_form.php"><button name="appointment"></button></a>
-       <?php    
-	    }
-	mysqli_close($link);
-    }
-    
-?>
-  </div>
-
+    <div class="appointment">
+        <form action="book_appointment.php" method="POST">
+            Appointment day: <input type="date" name="appointment_date">
+            <input type="submit" name="submit">
+        </form>
+    </div>
   </body>
 </html>
 
