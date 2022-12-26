@@ -24,7 +24,7 @@
       </ul>
 </nav>
 
-<form action="signup.php" class="box" mehtod ="post">
+<form action="signup.php" class="box" method ="post">
 
         <h1>Sign up</h1>
         <br> 
@@ -40,8 +40,8 @@
         </div>
         <input type="text" id="username" name="username" placeholder="Full name" required>
         <input type="password" id="password" name="password" placeholder="Password" required>
-        <input type="text" id="profession" name="profession" placeholder="Profession" style="display:none" required>
-        <input type="text" id="location" name="location" placeholder="Location" style="display:none" required>
+        <input type="text" id="profession" name="profession" placeholder="Profession" style="display:none" >
+        <input type="text" id="location" name="location" placeholder="Location" style="display:none" >
         <input type="submit" name="submit" value="Sign up">
 
         <a id="acc" href="login.php">Already have an account?</a>

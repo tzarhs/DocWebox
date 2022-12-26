@@ -26,7 +26,7 @@
 
 
 
-<form class="box" mehtod ="POST" >
+<form class="box" method ="POST" >
 
         <h1>Login</h1>
         <input type="text" id="username" name="username" placeholder="Username" required>
@@ -41,9 +41,9 @@
   include("connect.php");
 
   
-  if (isset( $_REQUEST['submit'])) {
-    $username = mysqli_real_escape_string($link,  $_REQUEST['username']);
-    $password = mysqli_real_escape_string($link,  $_REQUEST['password']);
+  if (isset( $_POST['submit'])) {
+    $username = mysqli_real_escape_string($link,  $_POST['username']);
+    $password = mysqli_real_escape_string($link,  $_POST['password']);
     $query = "SELECT * FROM login WHERE username='$username' AND password='$password'";
 
     $result = mysqli_query($link, $query);
@@ -53,8 +53,8 @@
       $_SESSION['username'] = $username;
       header('location: index.php');
     }else {
-      //echo "Invalid username or password";
       $error = "Invalid username or password";
+      echo "<script type='text/javascript'>alert('$error');</script>";
     }
   }
 

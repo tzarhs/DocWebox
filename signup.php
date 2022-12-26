@@ -2,7 +2,7 @@
 include_once 'connect.php';
   if (isset( $_POST['submit'])) {
 
-$username = $_POST['name'];
+$username = $_POST['username'];
 $password = $_POST['password'];
 $usertype = $_POST['select'];
 
@@ -13,7 +13,7 @@ elseif($_POST['select'] == "option2"){
 $usertype = 3;
 }
 
-mysqli_query($link,"INSERT INTO login(name, password, user_type)
+mysqli_query($link,"INSERT INTO login(username, password, user_type)
         VALUES ('$username', '$password', '$usertype')");
   
 header("Location: index.php?signup=success");
