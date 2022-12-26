@@ -26,12 +26,12 @@
     </nav>
 
     <div class="container">
-    <form action="" class="search-bar">
+      <form action="" class="search-bar">
         <input type="text" placeholder="Ειδικότητα" name="profession">
         <input type="text" placeholder="Περιοχή" name="location">
         <button type="submit"><img src="search.png"></button>
-    </form>
-</div>
+      </form>
+    </div>
     
         <div class="footer">
             <div class="footer-heading footer-1">
@@ -44,7 +44,7 @@
                 <h3><a href="#">Πολιτική Απορρήτου</a></h3></div>
             <div class="footer-heading footer-3">
                 <h3><a href="#">Όροι Χρήσης</a></h3></div>
-    </div>
+        </div>
   </body>
 </html>
 
