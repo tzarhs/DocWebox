@@ -40,7 +40,27 @@
         </div>
         <input type="text" id="username" name="username" placeholder="Full name" required>
         <input type="password" id="password" name="password" placeholder="Password" required>
-        <input type="text" id="profession" name="profession" placeholder="Profession" style="display:none" >
+
+          <?php
+              include("connect.php");
+              
+              $sql = "SELECT * FROM profession";
+              $result = mysqli_query($link, $sql);
+              
+              if (mysqli_num_rows($result) > 0) {
+                echo '<select id="profession" name="profession" placeholder="Profession" style="display:none">';
+                echo ' ';
+                while ($row = mysqli_fetch_assoc($result)) {
+                  echo '<option value="' . $row['id'] . '">' . $row['name'] . '</option>';
+                }
+                echo '</select>';
+              } else {
+                echo "No results found.";
+              }
+
+          ?>
+
+     
         <input type="text" id="location" name="location" placeholder="Location" style="display:none" >
         <input type="submit" name="submit" value="Sign up">
 
@@ -55,7 +75,3 @@
 
 </html>
 
-<?php
-    include("connect.php");
-
-?>
