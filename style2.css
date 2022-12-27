@@ -22,7 +22,6 @@ body {
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /*background: rgba(255, 255, 255, 0.5);*/
   background:rgba(255,255,255,0.3);
   text-align: center;
   outline: solid;
@@ -31,9 +30,8 @@ body {
 
 }
 
-.box input[type="text"],.box input[type="password"]{
+.box input[type="text"],.box input[type="password"],.box select{
 border: 0;
-/*background: rgb(255, 255, 255, 0.8);*/
 background:rgb(255, 255, 255,0.5);
 display: block;
 margin: 20px auto;
@@ -46,7 +44,7 @@ color:rgb(0, 0, 0) ;
 border-radius: 24px;
 transition: 0.25s;
 }
-.box input[type="text"]:focus,.box input[type="password"]:focus{
+.box input[type="text"]:focus,.box input[type="password"]:focus,.box select:focus{
   width: 280px;
   border-color: rgba(0, 0, 0, 0.5);
 
