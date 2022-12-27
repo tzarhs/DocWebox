@@ -11,12 +11,15 @@ if (isset( $_POST['submit'])) {
         $profession = $_POST['profession'];
         $location = $_POST['location'];
 
+     
         if($_POST['select'] == "option1"){
                 $result = mysqli_query($link,"SELECT * FROM patient WHERE name='$username'");
                 $num_rows = mysqli_num_rows($result);
                 if ($num_rows) {
-
                         header("location: create_acc.php?signup=failed"); 
+                        $error = "Signup Failed! Username already exists";
+                        echo "<script type='text'/javascript'>alert('$error');</script>";
+                        
                 }else{
                         mysqli_query($link,"INSERT INTO patient(name, password)
                         VALUES ('$username', '$password')");
@@ -26,8 +29,9 @@ if (isset( $_POST['submit'])) {
                 $result = mysqli_query($link,"SELECT * FROM doctor WHERE doctor_name='$username'");
                 $num_rows = mysqli_num_rows($result);
                 if ($num_rows) {
-
                         header("location: create_acc.php?signup=failed"); 
+                        $error = "Signup Failed! Username already exists";
+                        echo "<script type='text'/javascript'>alert('$error');</script>";
                 }else{
                         mysqli_query($link,"INSERT INTO doctor(profession_id, location, doctor_name, password)
                         VALUES ('$profession','$location', '$username', '$password')");
