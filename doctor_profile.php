@@ -24,7 +24,7 @@
       </label>
       <ul>
         <li><a href="appointments.php">Τα ραντεβού μου</a></li>
-        <li><a href="#">Το προφίλ μου</a></li>
+        <li><a href="doctor_profile.php">Το προφίλ μου</a></li>
         <li><a href="#">Αποσύνδεση</a></li>
       </ul>
 </nav>
@@ -64,17 +64,17 @@
                   <table border="0" align="center" cellpadding="2" cellspacing="0">
                     <tr id="trow-1">
                     <td class="tl-1"><div align="left" id="tb-name">Username:</div></td>
-                    <td class="tl-4"> <?php echo $_SESSION['username']; ?></td>
+                    <td class="tl-4"> <?php echo '&nbsp;&nbsp;' . $_SESSION['username']; ?></td>
                     </tr>                                
                                         
                     <tr id="trow-1">
                     <td class="tl-1"><div align="left" id="tb-name">Profession:</div></td>   
-                    <td class="tl-4"> <?php echo $_SESSION['profession']; ?></td>
+                    <td class="tl-4"> <?php echo '&nbsp;&nbsp;' . $_SESSION['profession']; ?></td>
                     </tr>
                                       
                     <tr id="trow-1">
                     <td class="tl-1"><div align="left" id="tb-name">Location:</div></td>                
-                    <td class="tl-4"> <?php echo $_SESSION['location']; ?></td>
+                    <td class="tl-4"> <?php echo '&nbsp;&nbsp;' . $_SESSION['location']; ?></td>
                     </tr>
                   </table>
               </form>
