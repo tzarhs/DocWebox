@@ -46,7 +46,7 @@ if (isset( $_POST['submit'])) {
                 }else{
                         mysqli_query($link,"INSERT INTO doctor(profession_id, location, doctor_name, password)
                         VALUES ('$profession','$location', '$username', '$password')");
-                        header("Location: doctor.php?signup=success");    
+                        header("Location: doctor_profile.php?signup=success");    
                 }
         }
 

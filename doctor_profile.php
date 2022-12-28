@@ -29,64 +29,64 @@
       </ul>
 </nav>
 
-<div id="center">
-  <div class="profile-container">
-      <h1 align='center'>Καλωσήρθες <?php echo $loggedin_session; ?>,</h1>
+
+  <div id="center-content">
+      <h1 align='center'>Καλωσήρθες <?php echo $_SESSION['username']; ?>,</h1>
       <h3 align='center'>Είσαι συνδεδεμένος. Μπορείς να αποσυνδεθείς πατώντας το κουμπί Αποσύνδεση πάνω δεξία στην οθόνη.</h3>
-    <div id="contentbox">
-      <?php
-      $sql="SELECT * FROM doctor WHERE id=$loggedin_id";
-      $result=mysqli_query($link,$sql);
-      ?>
-      <?php
-      while($rows=mysqli_fetch_array($result)){
-      ?>
-        <div id="signup">
-          <div id="signup-st">
-            <form action="" method="POST" id="signin" id="reg">
-              <div id="reg-head" class="headrg">Το Προφίλ σου</div>
-                <table border="0" align="center" cellpadding="2" cellspacing="0">
-                  <tr id="lg-1">
-                  <td class="tl-1"><div align="left" id="tb-name">Username:</div></td>
-                  <td class="tl-4"><?php echo $rows['doctor_name']; ?></td>
-                  </tr>
-                  
-                  <?php
-                    include("connect.php");
+    <div class="profile-container">
 
-                    $prof_query="SELECT profession.name
-                                FROM profession   
-                                INNER JOIN doctor ON profession.id = doctor.profession_id";
-                    $prof_result = mysqli_query($link, $prof_query);
+      <div id="contentbox">
+        <?php                   
+          $username =  $_SESSION['username'];
+  
+          $query = "SELECT * FROM doctor WHERE doctor_name = '$username'";
+          $result = mysqli_query($link, $query);
 
-                    if(mysqli_num_rows($prof_result) > 0){   
-                      echo '<tr id="lg-1">';
-                      echo '<td class="tl-1"><div align="left" id="tb-name">Profession:</div></td>';    
-                      while($row = mysqli_fetch_assoc($result)){
-                        echo '<td class="tl-4">' . $row['name'] . '</td>';
-                      }
-                      echo '</tr>';
-                    }else {
-                      echo 'No profession found.';
-                    }         
-                  ?>
+          while($row=mysqli_fetch_array($result)){
+            if (mysqli_num_rows($result) == 1) {
+              $_SESSION['location'] = $row['location'];
 
-                  <tr id="lg-1">
-                  <td class="tl-1"><div align="left" id="tb-name">Location:</div></td>
-                  
-                  
-                  <td class="tl-4"><?php echo $rows['location']; ?></td>
-                  </tr>
-                </table>
-            </form>
+              $prof_query="SELECT profession.name
+                          FROM profession   
+                          INNER JOIN doctor ON profession.id = doctor.profession_id";
+              $prof_result = mysqli_query($link, $prof_query);
+
+              while($row = mysqli_fetch_array($prof_result)){
+                  $_SESSION['profession'] = $row['name'];
+                }  
+            
+          }   
+        ?>
+          <div id="signup-info">
+            <div id="signup-st">
+              <form action="" method="POST" id="signin" id="reg">
+                <div id="reg-head" class="headrg">Το Προφίλ σου</div>
+                  <table border="0" align="center" cellpadding="2" cellspacing="0">
+                    <tr id="trow-1">
+                    <td class="tl-1"><div align="left" id="tb-name">Username:</div></td>
+                    <td class="tl-4"> <?php echo $_SESSION['username']; ?></td>
+                    </tr>                                
+                                        
+                    <tr id="trow-1">
+                    <td class="tl-1"><div align="left" id="tb-name">Profession:</div></td>   
+                    <td class="tl-4"> <?php echo $_SESSION['profession']; ?></td>
+                    </tr>
+                                      
+                    <tr id="trow-1">
+                    <td class="tl-1"><div align="left" id="tb-name">Location:</div></td>                
+                    <td class="tl-4"> <?php echo $_SESSION['location']; ?></td>
+                    </tr>
+                  </table>
+              </form>
+                </div>
           </div>
-        </div>
-      <?php 
-        }
-      ?>
-    </div>     
-  </div>
-</div>
+        <?php 
+          }
+        ?>
+      </div>     
+   </div>
+  </div> 
+
 </br>
 
 
