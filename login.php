@@ -54,7 +54,7 @@
     if (mysqli_num_rows($result1) == 1) {
       session_start();
       $_SESSION['username'] = $username;
-      header('location: index.php?doctor_login=success');
+      header('location: doctor.php?doctor_login=success');
 
     }elseif(mysqli_num_rows($result2) == 1){
       session_start();

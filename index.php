@@ -26,12 +26,25 @@
     </nav>
 
     <div class="container">
-      <!-- <h1>Αναζητήστε τον γιατρό που θέλετε!</h1> -->
+   <!-- <form action="search.php" class="search-bar" method="get">
+    <label for="category">Category:</label><br>
+  <select id="category" name="category">
+    <option value="location">Location</option>
+    <option value="profession">Profession</option>
+  </select><br><br>
+  <label for="keyword">Keyword:</label><br>
+  <input type="text" id="keyword" name="keyword"><br>
+  <input type="submit" value="Search">
+</form> 
+-->
+
+
       <form action="search.php" class="search-bar" method="POST">
         <input type="text" placeholder="Ειδικότητα" name="profession">
         <input type="text" placeholder="Περιοχή" name="location">
         <button type="submit" name="submit"><img src="search.png"></button>
       </form>
+    
     </div>
     
         <div class="footer">
