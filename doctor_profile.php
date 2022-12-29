@@ -25,16 +25,13 @@
       <ul>
         <li><a href="appointments.php">Τα ραντεβού μου</a></li>
         <li><a href="doctor_profile.php">Το προφίλ μου</a></li>
-        <li><a href="#">Αποσύνδεση</a></li>
       </ul>
 </nav>
 
 
   <div id="center-content">
-      <h1 align='center'>Καλωσήρθες <?php echo $_SESSION['username']; ?>,</h1>
-      <h3 align='center'>Είσαι συνδεδεμένος. Μπορείς να αποσυνδεθείς πατώντας το κουμπί Αποσύνδεση πάνω δεξία στην οθόνη.</h3>
-    <div class="profile-container">
-
+      <h1 align='center'>Καλωσήρθες <?php echo $_SESSION['username']; ?>!</h1>
+      <div class="profile-container">
       <div id="contentbox">
         <?php                   
           $username =  $_SESSION['username'];
@@ -79,6 +76,13 @@
                   </table>
               </form>
                 </div>
+          </div>
+          <div id="login">
+            <div id="login-sg">
+              <div id="right-sec"><a href="edit.php" id="right-sec-btn">Τροποποίηση Στοιχείων</a></div>
+              <div id="right-sec"><a href="logout.php" id="right-sec-btn">Απόσυνδεση</a></div>
+              <div id="right-sec"><a href="delete_acc.php" id="right-sec-btn">Διαγραφή Λογαρισμού</a></div>
+            </div>
           </div>
         <?php 
           }

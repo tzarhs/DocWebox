@@ -252,6 +252,7 @@ a.active,a:hover{
 }
 
 #tb-name{
+  color: rgb(59, 176, 230);
   float:right;
   font-size:20px;
  }
@@ -286,21 +287,14 @@ td.t-2{
   color:#FDE3A7;
  }
  
-#st{
+#right-sec{
   width:100%;
   text-align:center;
   padding-top:30px;
   padding-bottom:10px;
  }
 
-#st{
-  width:100%;
-  text-align:center;
-  padding-top:30px;
-  padding-bottom:10px;
- }
-
-#st-btn{
+#right-sec-btn{
   text-align:center;
   padding:10px 21px 10px 21px;
   background-color:#3498DB;
@@ -309,9 +303,10 @@ td.t-2{
   cursor:pointer;
   font-size:20px;
   font-weight:bold;
+  border-radius:8px;
  }
 
-#st-btn:hover{
+#right-sec-btn:hover{
   color:#3498DB;
   background:#fff;
   transition:1s;
