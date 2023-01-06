@@ -36,30 +36,19 @@
         <?php                   
           $username =  $_SESSION['username'];
   
-          $query = "SELECT * FROM doctor WHERE doctor_name = '$username'";
+          $query = "SELECT * FROM patient WHERE name = '$username'";
           $result = mysqli_query($link, $query);
 
           while($row=mysqli_fetch_array($result)){
-            if (mysqli_num_rows($result) == 1) {
-              $_SESSION['location'] = $row['location'];
-
-              $prof_query="SELECT profession.name, doctor.id
-                          FROM profession   
-                          INNER JOIN doctor ON profession.id = doctor.profession_id
-                          WHERE doctor.doctor_name = '$username'";
-              $prof_result = mysqli_query($link, $prof_query);
-
-              while($row = mysqli_fetch_array($prof_result)){
-                  $_SESSION['profession'] = $row['name'];
-                  $_SESSION['id'] = $row['id'];
-                }  
+            if (mysqli_num_rows($result) == 1) {       
+                 $_SESSION['id'] = $row['id'];
+            }  
             
-          }   
         ?>
           <div id="signup-info">
             <div id="signup-st">
               <form action="" method="POST" id="signin" id="reg">
-                <div id="reg-head" class="headrg">Το Προφίλ του Γιατρού</div>
+                <div id="reg-head" class="headrg">Το Προφίλ του Χρήστη</div>
                   <table border="0" align="center" cellpadding="2" cellspacing="0">
                   <tr id="trow-1">
                     <td class="tl-1"><div align="left" id="tb-name">ID:</div></td>
@@ -68,17 +57,9 @@
                     <tr id="trow-1">
                     <td class="tl-1"><div align="left" id="tb-name">Username:</div></td>
                     <td class="tl-4"> <?php echo '&nbsp;&nbsp;' . $_SESSION['username']; ?></td>
-                    </tr>                                
-                                        
-                    <tr id="trow-1">
-                    <td class="tl-1"><div align="left" id="tb-name">Profession:</div></td>   
-                    <td class="tl-4"> <?php echo '&nbsp;&nbsp;' . $_SESSION['profession']; ?></td>
-                    </tr>
-                                      
-                    <tr id="trow-1">
-                    <td class="tl-1"><div align="left" id="tb-name">Location:</div></td>                
-                    <td class="tl-4"> <?php echo '&nbsp;&nbsp;' . $_SESSION['location']; ?></td>
-                    </tr>
+                    </tr>   
+                                                              
+                   
                   </table>
               </form>
                 </div>
