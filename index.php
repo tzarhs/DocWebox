@@ -26,6 +26,7 @@
     </nav>
 
     <div class="container">
+<<<<<<< HEAD
       <h1>Health is wealth</h1>
     <form method="POST" action="" class="search-bar">
         <input type="text" placeholder="Ειδικότητα" name="profession">
@@ -46,6 +47,17 @@
       }
     ?>    
     <div class="footer">
+=======
+      <!-- <h1>Αναζητήστε τον γιατρό που θέλετε!</h1> -->
+      <form action="search.php" class="search-bar" method="POST">
+        <input type="text" placeholder="Ειδικότητα" name="profession">
+        <input type="text" placeholder="Περιοχή" name="location">
+        <button type="submit" name="submit"><img src="search.png"></button>
+      </form>
+    </div>
+    
+        <div class="footer">
+>>>>>>> 6700eba349dd4e06fea8987a095285157d7e1c75
             <div class="footer-heading footer-1">
                 <a href="#"><h3>DocWebox &copy;2022</h3></a></div>
             <div class="footer-heading footer-2">
