@@ -25,10 +25,6 @@
       <ul>
         <li><a href="appointments.php">Τα ραντεβού μου</a></li>
         <li><a href="doctor_profile.php">Το προφίλ μου</a></li>
-<<<<<<< HEAD
-        <li><a href="#">Αποσύνδεση</a></li>
-=======
->>>>>>> 6700eba349dd4e06fea8987a095285157d7e1c75
       </ul>
 </nav>
 
