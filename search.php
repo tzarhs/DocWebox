@@ -31,18 +31,28 @@
 
     if(isset($_POST['submit'])){
         $loc = $_POST['location'];
+        $prof = $_POST['profession'];
         
 
 
         //$query1 ="SELECT * FROM doctor WHERE location='$loc' ";
         //$result = mysqli_query($link,$query1);
-
-        $query2="SELECT profession.name,doctor.doctor_name,doctor.location
+    if(!empty($loc) && !empty($prof)){
+        $query="SELECT profession.name,doctor.doctor_name,doctor.location
         FROM profession   
         INNER JOIN doctor ON  profession.id = doctor.profession_id
-        WHERE doctor.location = '$loc'";
-        $prof_result = mysqli_query($link, $query2);
+        WHERE doctor.location='$loc' AND profession.name='$prof' ";
+    } else {
+      
+         $query="SELECT profession.name,doctor.doctor_name,doctor.location
+        FROM profession   
+        INNER JOIN doctor ON  profession.id = doctor.profession_id
+        WHERE doctor.location='$loc' OR profession.name='$prof' ";
+    }
+
+        $prof_result = mysqli_query($link, $query);
         ?>
+
         <table width="100%" cellpadding="2" cellspacing="1" border-color=black>
 	      <tr bgcolor="#DCDCDC">
 	  	  <td style="font-weight:bold">Όνομα</td>
