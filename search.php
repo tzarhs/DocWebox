@@ -31,16 +31,27 @@
 
     if(isset($_POST['submit'])){
         $loc = $_POST['location'];
-        
-        $result = mysqli_query($link,"SELECT doctor_name,location FROM doctor WHERE location='$loc' ");
+        $prof = ['profession'];
+
+
+        $query1 ="SELECT * FROM doctor WHERE location='$loc' AND profession_id='$prof' ";
+        $result = mysqli_query($link,$query1);
+
+        $query2="SELECT profession.name,doctor.location,doctor.doctor_name
+        FROM profession   
+        INNER JOIN doctor ON  profession.id = doctor.profession_id";
+        $prof_result = mysqli_query($link, $query2);
         ?>
         <table width="100%" cellpadding="2" cellspacing="1" border-color=black>
 	      <tr bgcolor="#DCDCDC">
-	  	  <td style="font-weight:bold">Name</td>
-		    <td style="font-weight:bold">Location</td>
+	  	  <td style="font-weight:bold">Όνομα</td>
+		    <td style="font-weight:bold">Τοποθεσία</td>
+        <td style="font-weight:bold">Ειδικότητα</td>
+        
 	      </tr>
   <?php
-    while ($row = mysqli_fetch_array($result)) {
+    while ($row = mysqli_fetch_array($prof_result)) {
+      
   ?>
 		    <tr>
           <td bgcolor="#DCDCDC">
@@ -49,6 +60,11 @@
         <td bgcolor="#DCDCDC">
 		    <?=$row['location']?>
 		    </td>
+        
+        <td bgcolor="#DCDCDC">
+		    <?=$row['name']?>
+		    </td>
+        
       
         <td bgcolor="#DCDCDC">
           <a href="appointment_form.php"><button name="appointment">Κλείστε ραντεβού</button></a><br>
@@ -59,8 +75,10 @@
 	    }
 	mysqli_close($link);
     }
+  
     
 ?>
+
   </div>
 
   </body>

@@ -70,6 +70,7 @@ display: none;
 
 .container{
 width:100%;
+<<<<<<< HEAD
 max-width: 1220px;
 margin-left: auto;
 margin-right: auto;
@@ -82,7 +83,18 @@ margin-bottom: 150px;
 div {
   display: block;
 }
+=======
+min-height: 100vh;
+padding:5%;
+background-image: linear-gradient(rgba(12, 120, 139, 0.9),rgba(0,8,51,0.9)), url(wallpaper.jpg);
+background-position: center;
+background-size: cover;
+display:flex;
+align-items: center;
+justify-content: center;
+>>>>>>> d463c8c49d5fc773d540d46002d68415b77f25d4
 
+}
 
 .search-bar{
 width:100%;
