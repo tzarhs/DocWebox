@@ -38,18 +38,18 @@ body {
 }
 
 .box input[type="text"],.box input[type="password"],.box select{
-border: 0;
-background:rgb(255, 255, 255,0.5);
-display: block;
-margin: 20px auto;
-text-align: center;
-border: 2px solid rgb(46, 162, 185);
-padding: 14px 10px;
-width: 200px;
-outline: none;
-color:rgb(0, 0, 0) ;
-border-radius: 24px;
-transition: 0.25s;
+  border: 0;
+  background:rgb(255, 255, 255,0.5);
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid rgb(46, 162, 185);
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color:rgb(0, 0, 0) ;
+  border-radius: 24px;
+  transition: 0.25s;
 }
 .box input[type="text"]:focus,.box input[type="password"]:focus,.box select:focus{
   width: 280px;
@@ -92,7 +92,6 @@ transition: 0.25s;
 }
 .box input[name="submit1"]:hover,a[id="acc"]:hover{
   background: #5199c9;
-
 }
 
 
@@ -201,17 +200,42 @@ a.active,a:hover{
   display: none;
 }
 
+#center-content-edit h2:hover{
+  transition: 0.3s ease-out;
+  color: rgba(240, 223, 195, 0.87);
+}
+
+#center-content h2:hover{
+  transition: 0.3s ease-out;
+  color: rgba(240, 223, 195, 0.87);
+}
+
 #contentbox{
   display:flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  
 }
 
 #center-content{
   float:left;
+  height: 40rem;
   width:100%;
   margin:20px auto;
+  justify-content: center;
+  padding-top:1%;
+  padding-bottom:0.5%;
+  background-color:#A2DED0;
+  border-top:5px solid #3498DB;
+}
+
+#center-content-edit{
+  float:left;
+  height: 40rem;
+  width:100%;
+  margin:20px auto;
+  align-items: center;
   padding-top:1%;
   padding-bottom:0.5%;
   background-color:#A2DED0;
@@ -221,12 +245,14 @@ a.active,a:hover{
 #signup-info{
   float:center;
   width:50%;
-}
+  }
+
 
 #signup-st,#func-bts-st{
   background-color:#22313F;
   margin:50px;
   border-radius:20px;
+  
   -webkit-box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.85);
  }
 
@@ -290,15 +316,41 @@ td.t-2{
  }
  
 .tl-4{
+  color:#FDE3A7;
+}
+
+.tl-data{
   font-size:17px;
   font-weight:bold;
   text-align:center;
   color:#FDE3A7;
- }
- 
- #tb-input{
   padding-left:10px;
  }
+
+
+input[type="text"], input[type="password"], .tl-data select{
+  border:black;
+  border-radius: 15px;
+  width: 350px;
+  font-size: 14px;
+  margin: 2px auto;
+  text-align: center;
+  padding: 5px 5px;
+  transition: 0.25s;
+  -ms-box-sizing:content-box;
+  -moz-box-sizing:content-box;
+  -webkit-box-sizing:content-box; 
+  box-sizing:content-box; 
+}
+
+.tl-data select{
+  width: 348px;
+  -ms-box-sizing:content-box;
+  -moz-box-sizing:content-box;
+  -webkit-box-sizing:content-box; 
+  box-sizing:content-box;
+}
+
 
 #bottom-sec{
   width:100%;
@@ -335,6 +387,23 @@ td.t-2{
   margin-top:5%;
  }
 
+#edit-btn input[type="submit"]{
+  border: 0;
+  background: rgb(255, 255, 255,0.5);
+  float: right;
+  margin: 20px auto;
+  margin-right: 10px;
+  text-align: center;
+  border: 2px solid rgb(46, 162, 185);
+  padding: 10px 10px;
+  width: 100px;
+  outline: none;
+  font-weight: bold;
+  color: rgb(255, 255, 255) ;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
 .footer-container { 
   padding-bottom: 4rem;
   }
@@ -353,26 +422,25 @@ td.t-2{
   flex-wrap: wrap;
 }
 
-  
-  .footer-heading {
+.footer-heading {
   display: flex;
   flex-direction: column;
   margin-right: 4rem;
   }
   
-  .footer-heading h3 {
+.footer-heading h3 {
   font-weight: 700;
   margin-bottom: 4rem;
   
   }
   
-  .footer-heading a {
+.footer-heading a {
   color: #fff;
   text-decoration: none;
   margin-bottom: 0.5rem;
   }
   
-  .footer-heading a:hover {
+.footer-heading a:hover {
   color: rgb(211, 156, 7);
   transition: 0.5s ease-out;
   }
@@ -438,3 +506,35 @@ a:hover,a.active{
     padding-top: 1rem;
   }
   }
+
+  @media screen and (max-width: 1185px){
+    input[type="text"], input[type="password"], .tl-data select{
+      width: 250px;
+  }
+}
+
+@media screen and (max-width: 985px){
+  input[type="text"], input[type="password"], .tl-data select{
+    width: 190px;
+}
+}
+
+@media screen and (max-width: 860px){
+  input[type="text"], input[type="password"], .tl-data select{
+    width: 150px;
+}
+}
+
+@media screen and (max-width:780px){
+  #contentbox{
+    align-items: flex-start;
+  }
+
+  #center-content h2 {
+    align-items: flex-start;
+  }
+
+  table{
+    width: 80%;
+  }
+}

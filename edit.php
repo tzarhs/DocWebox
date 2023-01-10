@@ -29,69 +29,33 @@
       </ul>
 </nav>
 
-  <div id="center-content">
-      <h2 align='center'>Τροποποίησε τις Λεπτομέρειες του Λογαριασμού σου</h2>
+  <div id="center-content-edit">
+      <h2 align='center'>Τροποποίησε τα στοιχεία του λογαριασμού σου</h2>
       <div class="profile-container">
-      <div id="contentbox">
-    <!--Άμα ο χρήστης ειναι γιατρός και εχει αλλαξει τα στοιχεια του -->
+        <div id="contentbox">
           <div id="signup-info">
             <div id="signup-st"> 
+            <!--Άμα ο χρήστης ειναι γιατρός και εχει αλλαξει τα στοιχεια του -->
             <?php
 
             if (isset($_POST['username']) && $_SESSION['usertype'] == 'doctor') {                
                               
                 $id =  $_SESSION['id'];
                 $username = $_POST['username'];
-                //$profession = $_POST['choose_prof'];
+                $password = $_POST['password'];
                 $location = $_POST['location'];
                 $profession_id = $_POST['profession_id'];
 
-                
-
-                $query1 = "UPDATE doctor set doctor_name='$username', profession_id='$profession_id', location='$location'
+                $query1 = "UPDATE doctor set doctor_name='$username', password = '$password', profession_id='$profession_id', location='$location'
                           WHERE id = '$id'";                
-                $result1 = mysqli_query($link, $query1) or die("Query error: " . mysqli_error($link));
-                      
-
-                $query2 = "SELECT profession.name
-                            FROM profession 
-                            INNER JOIN doctor ON profession.id = doctor.profession_id
-                            WHERE doctor.doctor_name = '$username'";
-                $result2 = mysqli_query($link, $query2) or die("Query error: " . mysqli_error($link));
-                while($row2 = mysqli_fetch_array($result2)){
-            ?>
-
-                  <form action="" method="POST" id="signin" id="reg">
-                    <div id="reg-head" class="headrg">Το Προφίλ του Γιατρου </div>
-                      <table border="0" align="center" cellpadding="2" cellspacing="0">
-                        <tr id="trow-1">
-                          <td class="tl-1"><div align="left" id="tb-name">Username:</div></td>
-                          <td class="tl-4"> <input id = "tb-input" name="username" type="text" value="<?=$username;?>" size="50"></td>
-                        </tr>                                
-                                  
-                        <tr id="trow-1">
-                          <td class="tl-1"><div align="left" id="tb-name">Profession:</div></td>   
-                          <td class="tl-4"> <input id ="tb-input" name="profession" type="text" value="<?=$row2[0];?>" size="50"></td>
-                        </tr>
-                                              
-                        <tr id="trow-1">
-                          <td class="tl-1"><div align="left" id="tb-name">Location:</div></td>                
-                          <td class="tl-4"> <input id ="tb-input" name="location" type="text" value="<?=$location;?>" size="50"></td>
-                        </tr>
-
-                        <tr>
-                          <td colspan="2"><input name="submit-edit" type="submit"></td>
-                        </tr>
-                          </table>
-                    </form>
-                    
-                    <?php
-                }             
+                $result1 = mysqli_query($link, $query1) or die("Query error: " . mysqli_error($link)); 
+                
+                header('location: doctor_profile.php?doctor_update=success');
             /* Άμα ο χρήστης είναι γιατρός και δεν έχει αλλάξει τα στοιχεία του */     
             }else if ($_SESSION['id'] && $_SESSION['usertype'] == 'doctor') {
                 $gid=$_SESSION['id'];
                           
-                $result3 = mysqli_query($link,"SELECT doctor.doctor_name, profession.name, doctor.location
+                $result3 = mysqli_query($link,"SELECT doctor.doctor_name, profession.name, profession.id, doctor.location, doctor.password
                                                 FROM profession   
                                                 INNER JOIN doctor ON profession.id = doctor.profession_id
                                                 WHERE doctor.id = '$gid'");
@@ -102,22 +66,28 @@
                         <div id="reg-head" class="headrg">Το Προφίλ του Γιατρού </div>
                         <table border="0" align="center" cellpadding="2" cellspacing="0">
                             <tr id="trow-1">
-                            <td class="tl-1"><div align="left" id="tb-name">Username:</div></td>
-                            <td class="tl-4"> <input id = "tb-input" name="username" type="text" value="<?=$row3[0];?>" size="50"></td>
-                            </tr>                                
+                            <td class="tl-name"><div align="left" id="tb-name">Username:</div></td>
+                            <td class="tl-data"> <input id = "tb-input" name="username" type="text" value="<?=$row3[0];?>" size="50"></td>
+                            </tr> 
+                            
+                            <tr id="trow-1">
+                            <td class="tl-name"><div align="left" id="tb-name">Password:</div></td>
+                            <td class="tl-data"> <input id = "tb-input" name="password" type="text" value="<?=$row3[4];?>" size="50"></td>
+                            </tr>      
                                  
                             <tr id="trow-1">
-                            <td class="tl-1"><div align="left" id="tb-name">Profession:</div></td>   
-                            <td class="tl-4"> 
+                            <td class="tl-name"><div align="left" id="tb-name">Profession:</div></td>   
+                            <td class="tl-data"> 
                             <?php
                            
                             $result4 = mysqli_query($link, "SELECT * FROM profession");
                             
                             if (mysqli_num_rows($result4) > 0) {
-                              echo '<select id="profession" name="profession_id" placeholder="' . $row3[1] . '">';
-                              echo ' ';
+                              echo '<select id="profession" name="profession_id" >';
+                              echo '<option value="' . $row3[2] . '" disabled hidden selected>' . $row3[1] . '</option>';
+                              
                               while ($row4 = mysqli_fetch_array($result4)) {
-                                echo '<option value="' . $row4['id'] . '">' . $row3[1] . '</option>';
+                                echo '<option value="' . $row4['id'] . '">' . $row4['name'] . ' </option>';
                               }
                               echo '</select>';
                             } else {
@@ -128,23 +98,63 @@
                             </tr>
                                             
                             <tr id="trow-1">
-                            <td class="tl-1"><div align="left" id="tb-name">Location:</div></td>                
-                            <td class="tl-4"> <input id ="tb-input" name="location" type="text" value="<?=$row3[2];?>" size="50"></td>
+                            <td class="tl-name"><div align="left" id="tb-name">Location:</div></td>                
+                            <td class="tl-data"> <input id ="tb-input" name="location" type="text" value="<?=$row3[3];?>" size="50"></td>
                             </tr>
 
                             <tr>
-                            <td colspan="2"><input name="submit-edit" type="submit"></td>
+                            <td id="edit-btn" colspan="2"><input name="submit1" type="submit"></td>
                             </tr>
                         </table>
                     </form>
-                    </div>
-            </div>
-
+                    
+            <!--Άμα ο χρήστης ειναι ασθενής και εχει αλλαξει τα στοιχεια του -->
             <?php 
-                }
+           }
+            }elseif (isset($_POST['username']) && $_SESSION['usertype'] == 'patient') {                
+                              
+                $id =  $_SESSION['id'];
+                $username = $_POST['username'];
+                $password = $_POST['password'];
+      
+                $query5 = "UPDATE patient set name='$username', password = '$password'
+                          WHERE id = '$id'";                
+                $result5 = mysqli_query($link, $query5) or die("Query error: " . mysqli_error($link));
+
+                header('location: patient_profile.php?patient_update=success');
+
+            /* Άμα ο χρήστης είναι ασθενής και δεν έχει αλλάξει τα στοιχεία του */     
+            }else if ($_SESSION['id'] && $_SESSION['usertype'] == 'patient') {
+              $gid=$_SESSION['id'];
+                        
+              $result6 = mysqli_query($link,"SELECT name, password FROM patient WHERE id = '$gid'");
+              while ($row6 = mysqli_fetch_array($result6)) {
+              ?>
+                  <form action="" method="POST" id="signin" id="reg">
+                  
+                      <div id="reg-head" class="headrg">Το Προφίλ του Ασθενή </div>
+                      <table border="0" align="center" cellpadding="2" cellspacing="0">
+                          <tr id="trow-1">
+                          <td class="tl-name"><div align="left" id="tb-name">Username:</div></td>
+                          <td class="tl-data"> <input id = "tb-input" name="username" type="text" value="<?=$row6[0];?>" size="50"></td>
+                          </tr> 
+                          
+                          <tr id="trow-1">
+                          <td class="tl-name"><div align="left" id="tb-name">Password:</div></td>
+                          <td class="tl-data"> <input id = "tb-input" name="password" type="text" value="<?=$row6[1];?>" size="50"></td>
+                          </tr>      
+                           
+                          <tr>
+                          <td colspan="2"><input name="submit-edit" type="submit"></td>
+                          </tr>
+                      </table>
+                  </form>
+                <?php
+              }
             }
-        
-        ?>
+            ?>  
+          </div>
+        </div>             
       </div>     
    </div>
   </div> 

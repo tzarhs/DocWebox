@@ -86,7 +86,7 @@
           <div id="func-bts">
             <div id="func-bts-sg">
               <div id="bottom-sec"><a href="edit.php" id="bottom-sec-btn">Τροποποίηση Στοιχείων</a></div>
-              <div id="bottom-sec"><a href="logout.php" id="bottom-sec-btn">Απόσυνδεση</a></div>
+              <div id="bottom-sec"><a href="logout.php" id="bottom-sec-btn">Αποσύνδεση</a></div>
               <div id="bottom-sec"><a href="delete_acc.php" id="bottom-sec-btn">Διαγραφή Λογαρισμού</a></div>
             </div>
           </div>
