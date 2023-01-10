@@ -54,12 +54,14 @@
     if (mysqli_num_rows($result1) == 1) {
       session_start();
       $_SESSION['username'] = $username;
+      $_SESSION['usertype'] = 'doctor';
       header('location: doctor_profile.php?doctor_login=success');
 
     }elseif(mysqli_num_rows($result2) == 1){
       session_start();
       $_SESSION['username'] = $username;
-      header('location: index.php?patient_login=success');
+      $_SESSION['usertype'] = 'patient';
+      header('location: patient_profile.php?patient_login=success');
 
     }else {
       $error = "Invalid username or password";

@@ -1,3 +1,10 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
 body {  
   font-family: sans-serif;
   width:100%;
@@ -147,12 +154,6 @@ color: rgba(0, 0, 0, 0.7);
 
 /*-----------------------*/
 
-*{
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
-  list-style: none;
-}
 
 nav{
   background: #0082e6;
@@ -200,6 +201,13 @@ a.active,a:hover{
   display: none;
 }
 
+#contentbox{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 #center-content{
   float:left;
   width:100%;
@@ -211,11 +219,11 @@ a.active,a:hover{
 }
 
 #signup-info{
-  float:left;
+  float:center;
   width:50%;
 }
 
-#signup-st,#login-st{
+#signup-st,#func-bts-st{
   background-color:#22313F;
   margin:50px;
   border-radius:20px;
@@ -231,6 +239,7 @@ a.active,a:hover{
   text-align:center;
   background-color:#fff;
   font-weight:bold;
+  
 }
 
 .headrg{
@@ -239,7 +248,7 @@ a.active,a:hover{
   padding-top:12px;
   padding-bottom:12px;
   font-size:22px;
-  color:#6C7A89;
+  color:black;
 }
 
 #reg-head-fail{
@@ -248,10 +257,11 @@ a.active,a:hover{
 
 #reg-head:hover{
   color:#3498DB;
-  transition:1s;
+  transition:0.5s;
 }
 
 #tb-name{
+  color: rgb(59, 176, 230);
   float:right;
   font-size:20px;
  }
@@ -286,21 +296,18 @@ td.t-2{
   color:#FDE3A7;
  }
  
-#st{
+ #tb-input{
+  padding-left:10px;
+ }
+
+#bottom-sec{
   width:100%;
   text-align:center;
-  padding-top:30px;
+  padding-top:40px;
   padding-bottom:10px;
  }
 
-#st{
-  width:100%;
-  text-align:center;
-  padding-top:30px;
-  padding-bottom:10px;
- }
-
-#st-btn{
+#bottom-sec-btn{
   text-align:center;
   padding:10px 21px 10px 21px;
   background-color:#3498DB;
@@ -309,21 +316,23 @@ td.t-2{
   cursor:pointer;
   font-size:20px;
   font-weight:bold;
+  border-radius:8px;
  }
 
-#st-btn:hover{
+#bottom-sec-btn:hover{
   color:#3498DB;
   background:#fff;
   transition:1s;
  } 
 
-#login{
-  float:right;
+#func-bts{
+  align-items: center;
   width:50%;
+  margin-bottom: 5%;
  }
 
-#login-sg{
-  margin-top:20%;
+#func-bts-sg{
+  margin-top:5%;
  }
 
 .footer-container { 
@@ -331,7 +340,7 @@ td.t-2{
   }
   
 .footer {
-  position:absolute;
+  position:relative;
   bottom: 0;
   font-size: 16px;
   width: 100%;
