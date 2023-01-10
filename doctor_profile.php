@@ -24,7 +24,7 @@
       </label>
       <ul>
         <li><a href="appointments.php">Τα ραντεβού μου</a></li>
-        <li><a href="#">Το προφίλ μου</a></li>
+        <li><a href="doctor_profile.php">Το προφίλ μου</a></li>
         <li><a href="#">Αποσύνδεση</a></li>
       </ul>
 </nav>

@@ -54,11 +54,7 @@
     if (mysqli_num_rows($result1) == 1) {
       session_start();
       $_SESSION['username'] = $username;
-<<<<<<< HEAD
-      header('location: doctor.php?doctor_login=success');
-=======
       header('location: doctor_profile.php?doctor_login=success');
->>>>>>> b9cbcf8421d22e2881914ddaf79699dd2d748439
 
     }elseif(mysqli_num_rows($result2) == 1){
       session_start();

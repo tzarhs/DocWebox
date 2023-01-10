@@ -31,16 +31,16 @@
 
     if(isset($_POST['submit'])){
         $loc = $_POST['location'];
-        $prof = $_POST['profession'];
+        $prof = ['profession'];
 
-        $profid = "SELECT id FROM profession WHERE name='$prof' ";
-        
-        $result = mysqli_query($link,"SELECT doctor_name,location FROM doctor WHERE location='$loc' ");
-        
-        $prof_query="SELECT profession.name
-                    FROM profession
-                    INNER JOIN doctor ON profession.id = doctor.profession_id";
-        $prof_result = mysqli_query($link, $prof_query); 
+
+        $query1 ="SELECT * FROM doctor WHERE location='$loc' AND profession_id='$prof' ";
+        $result = mysqli_query($link,$query1);
+
+        $query2="SELECT profession.name,doctor.location,doctor.doctor_name
+        FROM profession   
+        INNER JOIN doctor ON  profession.id = doctor.profession_id";
+        $prof_result = mysqli_query($link, $query2);
         ?>
         <table width="100%" cellpadding="2" cellspacing="1" border-color=black>
 	      <tr bgcolor="#DCDCDC">
@@ -50,19 +50,19 @@
         
 	      </tr>
   <?php
-    while ($row1 = mysqli_fetch_array($result)) {
-
+    while ($row = mysqli_fetch_array($prof_result)) {
+      
   ?>
 		    <tr>
           <td bgcolor="#DCDCDC">
-	      <?=$row1['doctor_name']?>
+	      <?=$row['doctor_name']?>
 		    </td>
         <td bgcolor="#DCDCDC">
-		    <?=$row1['location']?>
+		    <?=$row['location']?>
 		    </td>
         
         <td bgcolor="#DCDCDC">
-		    <?=$row['profession']?>
+		    <?=$row['name']?>
 		    </td>
         
       
