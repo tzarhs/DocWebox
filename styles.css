@@ -9,8 +9,18 @@
 
 
 h1 {
-  font-size: 24px;
-  text-align: center;  
+  
+  font-size: 2.8125rem;
+  margin: 0 0 60px;
+  font-weight: 900;
+  min-height: 36px;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  text-align: center;
+  color: #fff;
+  box-sizing: inherit;
 }
 
 body{
@@ -18,6 +28,7 @@ position:relative;
 overflow:auto;
 margin:0;
 padding:0;
+background-image: linear-gradient(rgba(12, 120, 139, 0.9),rgba(0,8,51,0.9)), url(wallpaper.jpg);
 
 }
 
@@ -69,14 +80,17 @@ display: none;
 
 .container{
 width:100%;
-min-height: 100vh;
-padding:5%;
-background-image: linear-gradient(rgba(12, 120, 139, 0.9),rgba(0,8,51,0.9)), url(wallpaper.jpg);
-background-position: center;
-background-size: cover;
-display:flex;
-align-items: center;
-justify-content: center;
+max-width: 1220px;
+margin-left: auto;
+margin-right: auto;
+padding-left: 0.9375em;
+padding-right: 0.9375em;
+margin-top: 150px;
+margin-bottom: 150px;
+}
+
+div {
+  display: block;
 }
 
 .search-bar{
@@ -86,7 +100,7 @@ background:rgba(255,255,255,0.2);
 display: flex;
 align-items: center;
 border-radius: 60px;
-padding:10px 20px;
+
 }
 
 .search-bar input

@@ -26,14 +26,26 @@
     </nav>
 
     <div class="container">
-    <form action="" class="search-bar">
+      <h1>Health is wealth</h1>
+    <form method="POST" action="" class="search-bar">
         <input type="text" placeholder="Ειδικότητα" name="profession">
         <input type="text" placeholder="Περιοχή" name="location">
         <button type="submit"><img src="search.png"></button>
     </form>
-</div>
-    
-        <div class="footer">
+    </div>
+    <?php
+      if(isset($_POST["submit"])){
+        $prof = $_POST["profession"];
+        $loc = $_POST["location"];
+
+        $result = 	mysqli_query($link, "SELECT * FROM profession WHERE name='$prof' ");
+        while ($row = mysqli_fetch_array($result)) {
+          echo $row[1];
+        }
+        mysqli_close($link); 
+      }
+    ?>    
+    <div class="footer">
             <div class="footer-heading footer-1">
                 <a href="#"><h3>DocWebox &copy;2022</h3></a></div>
             <div class="footer-heading footer-2">
