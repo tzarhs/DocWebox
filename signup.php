@@ -32,6 +32,8 @@ if (isset( $_POST['submit'])) {
                 }else{
                         mysqli_query($link,"INSERT INTO patient(name, password)
                         VALUES ('$username', '$password')");
+                         $_SESSION['username'] = $username;
+                         $_SESSION['usertype'] = 'patient';
                         header("Location: index.php?signup=success");    
                 }
         }elseif($_POST['select'] == "option2"){
@@ -45,6 +47,8 @@ if (isset( $_POST['submit'])) {
                 }else{
                         mysqli_query($link,"INSERT INTO doctor(profession_id, location, doctor_name, password)
                         VALUES ('$profession','$location', '$username', '$password')");
+                        $_SESSION['username'] = $username;
+                        $_SESSION['usertype'] = 'doctor';
                         header("Location: doctor_profile.php?signup=success");    
                 }
         }
