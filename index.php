@@ -19,11 +19,40 @@
         <a href="index.php"><img src="logo_doctor.png"></a>
       </label>
       <ul>
-        <li><a class="active" href="#">Ειδικότητες</a></li>
+        <li><a href="#sidebar" id="toggle">Ειδικότητες</a></li>
         <li><a href="login.php">Σύνδεση/Εγγραφή</a></li>
         <li><a href="#">Σχετικά με εμάς</a></li>
       </ul>
     </nav>
+
+    <div id="sidebar">
+      <header>Ειδικότητες</header>
+      <ul>
+        <li><a href="#">Αιματολόγος</a></li>
+        <li><a href="#">Αλεργιολόγος</a></li>
+        <li><a href="#">Αναισθησιολόγος</a></li>
+        <li><a href="#">Γενικός Ιατρός</a></li>
+        <li><a href="#">Γαστρεντερολόγος</a></li>
+        <li><a href="#">Γυναικολόγος</a></li>
+        <li><a href="#">Δερματολόγος</a></li>
+        <li><a href="#">Διαιτολόγος</a></li>
+        <li><a href="#">Καρδιολόγος</a></li>
+        <li><a href="#">Λογοθεραπευτής</a></li>
+        <li><a href="#">Μαστρολόγος</a></li>
+        <li><a href="#">Νευρολόγος</a></li>
+        <li><a href="#">Ογκολόγος</a></li>
+        <li><a href="#">Οδοντίατρος</a></li>
+        <li><a href="#">Ορθοπεδικός</a></li>
+        <li><a href="#">Οφθαλμίατος</a></li>
+        <li><a href="#">Παθολόγος</a></li>
+        <li><a href="#">Παιδίατρος</a></li>
+        <li><a href="#">Πλαστικός Χειρούργος</a></li>
+        <li><a href="#">Ρευματολόγος</a></li>
+        <li><a href="#">Φυσικοθεραπευτής</a></li>
+        <li><a href="#">Ψυχίατρος</a></li>
+        <li><a href="#">Ωτορινολαρυγγολόγος</a></li>
+      </ul>
+    </div>
 
     <div class="container">
       <!-- <h1>Αναζητήστε τον γιατρό που θέλετε!</h1> -->
@@ -48,6 +77,27 @@
         </div>
   </body>
 </html>
+
+<script>
+  const toggle = document.getElementById('toggle');
+  const sidebar = document.getElementById('sidebar');
+
+  document.onclick = function(e){
+    if(e.target.id !== 'sidebar' && e.target.id !== 'toggle'){
+      toggle.classList.remove('active');
+      sidebar.classList.remove('active');
+
+    }
+  }
+
+
+  toggle.onclick = function(){
+    toggle.classList.toggle('active');
+    sidebar.classList.toggle('active');
+  }
+
+  
+</script>
 
 <?php
     include("connect.php");
