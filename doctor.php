@@ -20,9 +20,21 @@
       <ul>
         <li><a href="appointments.php">Τα ραντεβού μου</a></li>
         <li><a href="#">Το προφίλ μου</a></li>
-        <li><a href="#">Αποσύνδεση</a></li>
+        <li><a href="disconnect.php">Αποσύνδεση</a></li>
       </ul>
 </nav>
+<?php
+include("connect.php");
+
+session_start();
+
+if (session_status() == PHP_SESSION_ACTIVE) {
+  echo 'There is an active session';
+} else {
+  echo 'There is no active session';
+}
+
+?>
 
 </body>
 </html>

@@ -31,36 +31,68 @@
 
     if(isset($_POST['submit'])){
         $loc = $_POST['location'];
+        $prof = $_POST['profession'];
         
-        $result = mysqli_query($link,"SELECT doctor_name,location FROM doctor WHERE location='$loc' ");
+
+
+        //$query1 ="SELECT * FROM doctor WHERE location='$loc' ";
+        //$result = mysqli_query($link,$query1);
+    if(!empty($loc) && !empty($prof)){
+        $query="SELECT profession.name,doctor.doctor_name,doctor.location
+        FROM profession   
+        INNER JOIN doctor ON  profession.id = doctor.profession_id
+        WHERE doctor.location='$loc' AND profession.name='$prof' ";
+    } else {
+      
+         $query="SELECT profession.name,doctor.doctor_name,doctor.location
+        FROM profession   
+        INNER JOIN doctor ON  profession.id = doctor.profession_id
+        WHERE doctor.location='$loc' OR profession.name='$prof' ";
+    }
+
+        $prof_result = mysqli_query($link, $query);
         ?>
+
         <table width="100%" cellpadding="2" cellspacing="1" border-color=black>
 	      <tr bgcolor="#DCDCDC">
-	  	  <td style="font-weight:bold">Name</td>
-		    <td style="font-weight:bold">Location</td>
+	  	  <td style="font-weight:bold">Όνομα</td>
+		    <td style="font-weight:bold">Τοποθεσία</td>
+        <td style="font-weight:bold">Ειδικότητα</td>
+        
 	      </tr>
   <?php
-    while ($row = mysqli_fetch_array($result)) {
+    while ($row = mysqli_fetch_array($prof_result)) {
+      
   ?>
+    
 		    <tr>
           <td bgcolor="#DCDCDC">
 	      <?=$row['doctor_name']?>
 		    </td>
+
         <td bgcolor="#DCDCDC">
 		    <?=$row['location']?>
 		    </td>
+        
+        <td bgcolor="#DCDCDC">
+		    <?=$row['name']?>
+		    </td>
+        
       
         <td bgcolor="#DCDCDC">
           <a href="appointment_form.php"><button name="appointment">Κλείστε ραντεβού</button></a><br>
         </td>
         </tr>
+      
        <?php 
        echo "<br>";   
 	    }
 	mysqli_close($link);
     }
+  
     
 ?>
+
   </div>
 
   </body>
