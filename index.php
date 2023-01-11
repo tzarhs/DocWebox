@@ -75,7 +75,7 @@
             <div class="footer-heading footer-3">
                 <h3><a href="#">Όροι Χρήσης</a></h3></div>
         </div>
-  </body>
+        </body>
 </html>
 
 <script>

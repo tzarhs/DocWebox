@@ -88,7 +88,7 @@ display: none;
 #sidebar ul a {
   display: block;
   color: white;
-  height: 100%;
+  height: auto;
   width: 100%;
   line-height: 30px;
   font-size: 15px;
