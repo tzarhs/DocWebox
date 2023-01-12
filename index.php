@@ -26,19 +26,7 @@
     </nav>
 
     <div class="container">
-   <!-- <form action="search.php" class="search-bar" method="get">
-    <label for="category">Category:</label><br>
-  <select id="category" name="category">
-    <option value="location">Location</option>
-    <option value="profession">Profession</option>
-  </select><br><br>
-  <label for="keyword">Keyword:</label><br>
-  <input type="text" id="keyword" name="keyword"><br>
-  <input type="submit" value="Search">
-</form> 
--->
-
-
+   
       <form action="search.php" class="search-bar" method="POST">
         <input type="text" placeholder="Ειδικότητα" name="profession">
         <input type="text" placeholder="Περιοχή" name="location">
