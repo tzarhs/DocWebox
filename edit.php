@@ -84,7 +84,7 @@
                             
                             if (mysqli_num_rows($result4) > 0) {
                               echo '<select id="profession" name="profession_id" >';
-                              echo '<option value="' . $row3[2] . '" disabled hidden selected>' . $row3[1] . '</option>';
+                              echo '<option value="' . $row3[2] . '"hidden selected>' . $row3[1] . '</option>';
                               
                               while ($row4 = mysqli_fetch_array($result4)) {
                                 echo '<option value="' . $row4['id'] . '">' . $row4['name'] . ' </option>';

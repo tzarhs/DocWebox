@@ -12,7 +12,7 @@ body {
   min-height: 100vh;
   background-position: center;
   background-size: cover;
-
+  
 }
 
 .box h1{
@@ -252,7 +252,7 @@ a.active,a:hover{
   background-color:#22313F;
   margin:50px;
   border-radius:20px;
-  
+  min-height: 0px;
   -webkit-box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.85);
  }
 
@@ -265,8 +265,8 @@ a.active,a:hover{
   text-align:center;
   background-color:#fff;
   font-weight:bold;
-  
-}
+
+  }
 
 .headrg{
   border-top-left-radius:20px;
@@ -332,6 +332,7 @@ input[type="text"], input[type="password"], .tl-data select{
   border:black;
   border-radius: 15px;
   width: 350px;
+  font-weight:bold;
   font-size: 14px;
   margin: 2px auto;
   text-align: center;
@@ -341,6 +342,14 @@ input[type="text"], input[type="password"], .tl-data select{
   -moz-box-sizing:content-box;
   -webkit-box-sizing:content-box; 
   box-sizing:content-box; 
+}
+
+option{
+  font-weight: bold;
+}
+
+.tl-4{
+  font-weight: bold;
 }
 
 .tl-data select{
@@ -357,6 +366,7 @@ input[type="text"], input[type="password"], .tl-data select{
   text-align:center;
   padding-top:40px;
   padding-bottom:10px;
+ 
  }
 
 #bottom-sec-btn{
@@ -366,9 +376,10 @@ input[type="text"], input[type="password"], .tl-data select{
   border:none;
   color:#fff;
   cursor:pointer;
-  font-size:20px;
+  font-size:1.5rem;
   font-weight:bold;
   border-radius:8px;
+  line-height:1;
  }
 
 #bottom-sec-btn:hover{
@@ -526,15 +537,90 @@ a:hover,a.active{
 }
 
 @media screen and (max-width:780px){
-  #contentbox{
+  #signup-info{
     align-items: flex-start;
+    transition: 0.5ms;
   }
 
-  #center-content h2 {
-    align-items: flex-start;
+  form{
+    width: 100%;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
   }
 
-  table{
+  #signup-info{
     width: 80%;
   }
-}
+
+  #tb-name{
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  input[type="text"], input[type="password"], .tl-data select{
+    width: 250px;
+  } 
+
+  #reg-head{
+    font-size: 20px;
+  }
+
+  #bottom-sec-btn{
+    font-size: 1rem;
+  }
+
+ }
+
+ @media screen and (max-width:471px) {
+  #bottom-sec-btn{
+    font-size: 0.8rem;
+   }
+ }
+
+ @media screen and (max-width:400px) {
+  #contentbox{
+    align-items: flex-start;
+   }
+
+   #func-bts{
+    display: flex;
+    margin-bottom: 0px;
+    margin-top: 0px;
+       
+   }
+
+   #func-bts-sg, #func-bts {
+    
+    width: 100%;
+   }
+
+   #func-bts-sg{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: space-around;
+    height: 400px;
+   }
+
+   #signup-info, #signup-st{
+    align-items: flex-start;
+    width:95%;
+   }
+
+   #signup-st{ 
+    margin-right:5px;
+    margin-left:5px;
+   }
+
+   #signup-info{
+    margin-right:5px;
+    margin:5px;
+    margin-top:35px;
+   }
+
+   #center-content{
+    height:60rem;
+  }
+ }
+
+
