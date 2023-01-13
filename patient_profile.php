@@ -24,7 +24,7 @@
       </label>
       <ul>
         <li><a href="appointments.php">Τα ραντεβού μου</a></li>
-        <li><a href="doctor_profile.php">Το προφίλ μου</a></li>
+        <li><a href="patient_profile.php"><?php echo $_SESSION['username']?></a></li>
       </ul>
 </nav>
 
@@ -41,29 +41,29 @@
 
           while($row=mysqli_fetch_array($result)){
             if (mysqli_num_rows($result) == 1) {       
-                 $_SESSION['id'] = $row['id'];
+              $_SESSION['id'] = $row['id'];
             }  
             
         ?>
-          <div id="signup-info">
-            <div id="signup-st">
-              <form action="" method="POST" id="signin" id="reg">
-                <div id="reg-head" class="headrg">Το Προφίλ του Χρήστη</div>
-                  <table border="0" align="center" cellpadding="2" cellspacing="0">
-                  <tr id="trow-1">
-                    <td class="tl-1"><div align="left" id="tb-name">ID:</div></td>
-                    <td class="tl-4"> <?php echo '&nbsp;&nbsp;' . $_SESSION['id']; ?></td>
-                    </tr>           
+            <div id="signup-info">
+              <div id="signup-st">
+                <form action="" method="POST" id="signin" id="reg">
+                  <div id="reg-head" class="headrg">Το Προφίλ του Χρήστη</div>
+                    <table border="0" align="center" cellpadding="2" cellspacing="0">
                     <tr id="trow-1">
-                    <td class="tl-1"><div align="left" id="tb-name">Username:</div></td>
-                    <td class="tl-4"> <?php echo '&nbsp;&nbsp;' . $_SESSION['username']; ?></td>
-                    </tr>   
-                                                              
-                   
-                  </table>
-              </form>
-                </div>
-          </div>
+                      <td class="tl-1"><div align="left" id="tb-name">ID:</div></td>
+                      <td class="tl-4"> <?php echo '&nbsp;&nbsp;' . $_SESSION['id']; ?></td>
+                      </tr>           
+                      <tr id="trow-1">
+                      <td class="tl-1"><div align="left" id="tb-name">Username:</div></td>
+                      <td class="tl-4"> <?php echo '&nbsp;&nbsp;' . $_SESSION['username']; ?></td>
+                      </tr>   
+                                                                
+                    
+                    </table>
+                </form>
+                  </div>
+            </div>
           <div id="func-bts">
             <div id="func-bts-sg">
               <div id="bottom-sec"><a href="edit.php" id="bottom-sec-btn">Τροποποίηση Στοιχείων</a></div>

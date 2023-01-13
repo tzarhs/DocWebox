@@ -24,7 +24,7 @@
       </label>
       <ul>
         <li><a href="appointments.php">Τα ραντεβού μου</a></li>
-        <li><a href="doctor_profile.php">Το προφίλ μου</a></li>
+        <li><a href="doctor_profile.php"><?php echo $_SESSION['username']?></a></li>
       </ul>
 </nav>
 

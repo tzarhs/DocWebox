@@ -1,3 +1,8 @@
+<?php
+    include("connect.php");
+    session_start();
+?>
+   
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +25,23 @@
       </label>
       <ul>
         <li><a class="active" href="#">Ειδικότητες</a></li>
-        <li><a href="login.php">Σύνδεση/Εγγραφή</a></li>
+        <?php
+        if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
+          if($_SESSION['usertype'] == 'doctor'){
+        ?>
+            <li><a href="doctor_profile.php">Το Προφίλ μου</a></li>
+        <?php
+          }elseif($_SESSION['usertype'] == 'patient'){
+        ?>
+           <li><a href="patient_profile.php">Το Προφίλ μου</a></li>         
+        <?php
+        }
+        }else{
+        ?>
+          <li><a href="login.php">Σύνδεση/Εγγραφή</a></li>
+        <?php
+        }
+        ?>
         <li><a href="#">Σχετικά με εμάς</a></li>
       </ul>
     </nav>
@@ -50,7 +71,3 @@
   </body>
 </html>
 
-<?php
-    include("connect.php");
-?>
-   
