@@ -28,15 +28,13 @@
   <div class="list">
 <?php
     include("connect.php");
+    session_Start();
 
     if(isset($_POST['submit'])){
         $loc = $_POST['location'];
         $prof = $_POST['profession'];
         
 
-
-        //$query1 ="SELECT * FROM doctor WHERE location='$loc' ";
-        //$result = mysqli_query($link,$query1);
     if(!empty($loc) && !empty($prof)){
         $query="SELECT profession.name,doctor.doctor_name,doctor.location
         FROM profession   
@@ -62,7 +60,7 @@
 	      </tr>
   <?php
     while ($row = mysqli_fetch_array($prof_result)) {
-      
+     
   ?>
     
 		    <tr>
@@ -86,6 +84,7 @@
       
        <?php 
        echo "<br>";   
+        $_SESSION['doctor_name'] = $row['doctor_name'];
 	    }
 	mysqli_close($link);
     }
