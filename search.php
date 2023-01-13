@@ -35,9 +35,6 @@
         $prof = $_POST['profession'];
         
 
-
-        //$query1 ="SELECT * FROM doctor WHERE location='$loc' ";
-        //$result = mysqli_query($link,$query1);
     if(!empty($loc) && !empty($prof)){
         $query="SELECT profession.name,doctor.doctor_name,doctor.location
         FROM profession   
