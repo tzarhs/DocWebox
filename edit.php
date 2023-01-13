@@ -145,7 +145,7 @@
                           </tr>      
                            
                           <tr>
-                          <td colspan="2"><input name="submit-edit" type="submit"></td>
+                          <td id="edit-btn" colspan="2"><input name="submit-edit" type="submit"></td>
                           </tr>
                       </table>
                   </form>
