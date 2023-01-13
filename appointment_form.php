@@ -25,9 +25,17 @@
       </ul>
     </nav>
 
+  <?php
+    include("connect.php");
+    session_start();
+
+    
+  ?>
+
     <div class="appointment">
         <form action="book_appointment.php" method="POST">
             Appointment day: <input type="date" name="appointment_date">
+            <input type="text" placeholder="Ονοματεπώνυμο" name="fullname">
             <input type="submit" name="submit">
         </form>
     </div>

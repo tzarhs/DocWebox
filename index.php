@@ -26,10 +26,7 @@
     </nav>
 
     <div class="container">
-<<<<<<< HEAD
-=======
    
->>>>>>> d1d0ca0784e59f6791da27cef3faa00c238d779e
       <form action="search.php" class="search-bar" method="POST">
         <input type="text" placeholder="Ειδικότητα" name="profession">
         <input type="text" placeholder="Περιοχή" name="location">

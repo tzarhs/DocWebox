@@ -28,6 +28,7 @@
   <div class="list">
 <?php
     include("connect.php");
+    session_Start();
 
     if(isset($_POST['submit'])){
         $loc = $_POST['location'];
@@ -62,7 +63,7 @@
 	      </tr>
   <?php
     while ($row = mysqli_fetch_array($prof_result)) {
-      
+     
   ?>
     
 		    <tr>
@@ -86,6 +87,7 @@
       
        <?php 
        echo "<br>";   
+        $_SESSION['doctor_name'] = $row['doctor_name'];
 	    }
 	mysqli_close($link);
     }
