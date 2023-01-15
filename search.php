@@ -32,7 +32,7 @@
 
     if(isset($_POST['submit'])){
         $loc = $_POST['location'];
-        $prof = $_POST['profession'];
+        $prof = $_POST['name'];
         
 
     if(!empty($loc) && !empty($prof)){
