@@ -18,7 +18,10 @@ if (isset( $_POST['submit'])) {
         $username = $_POST['username'];
         $password = $_POST['password'];
         $profession = $_POST['profession'];
-        $location = $_POST['location'];
+        $city = $_POST['city'];
+        $address = $_POST['address'];
+        $email = $_POST['email'];
+        $tel = $_POST['tel'];
 
      
         if($_POST['select'] == "option1"){
@@ -30,8 +33,8 @@ if (isset( $_POST['submit'])) {
                         echo "<script type='text/javascript'>alert('$error');</script>";
                         header('location: login.php?login=failed');
                 }else{
-                        mysqli_query($link,"INSERT INTO patient(name, password)
-                        VALUES ('$username', '$password')");
+                        mysqli_query($link,"INSERT INTO patient(name, password, email)
+                        VALUES ('$username', '$password', '$email')");
                          $_SESSION['logged_in'] = true;
                          $_SESSION['username'] = $username;
                          $_SESSION['usertype'] = 'patient';
@@ -46,8 +49,8 @@ if (isset( $_POST['submit'])) {
                         echo "<script type='text/javascript'>alert('$error');</script>";
                         header('location: login.php?login=failed');
                 }else{
-                        mysqli_query($link,"INSERT INTO doctor(profession_id, location, doctor_name, password)
-                        VALUES ('$profession','$location', '$username', '$password')");
+                        mysqli_query($link,"INSERT INTO doctor(profession_id, city, doctor_name, password, adress, tel)
+                        VALUES ('$profession','$city', '$username', '$password', '$address', '$tel')");
                         $_SESSION['logged_in'] = true;
                         $_SESSION['username'] = $username;
                         $_SESSION['usertype'] = 'doctor';

@@ -103,6 +103,10 @@ display: none;
   left: 0;
 }
 
+#sidebar_data a{
+  color: #a0c7e4;
+}
+
 .container{
 width:100%;
 min-height: 100vh;
