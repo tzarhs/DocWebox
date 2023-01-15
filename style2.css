@@ -376,7 +376,7 @@ option{
   border:none;
   color:#fff;
   cursor:pointer;
-  font-size:1.5rem;
+  font-size:1.3rem;
   font-weight:bold;
   border-radius:8px;
   line-height:1;
@@ -580,6 +580,7 @@ a:hover,a.active{
  @media screen and (max-width:400px) {
   #contentbox{
     align-items: flex-start;
+    
    }
 
    #func-bts{

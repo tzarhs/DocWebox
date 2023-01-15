@@ -1,3 +1,8 @@
+<?php
+    include("connect.php");
+    session_start();
+?>
+   
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,8 +24,24 @@
         <a href="index.php"><img src="logo_doctor.png"></a>
       </label>
       <ul>
-        <li><a href="#sidebar" id="toggle">Ειδικότητες</a></li>
-        <li><a href="login.php">Σύνδεση/Εγγραφή</a></li>
+        <li><a class="active" href="#">Ειδικότητες</a></li>
+        <?php
+        if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
+          if($_SESSION['usertype'] == 'doctor'){
+        ?>
+            <li><a href="doctor_profile.php">Το Προφίλ μου</a></li>
+        <?php
+          }elseif($_SESSION['usertype'] == 'patient'){
+        ?>
+           <li><a href="patient_profile.php">Το Προφίλ μου</a></li>         
+        <?php
+        }
+        }else{
+        ?>
+          <li><a href="login.php">Σύνδεση/Εγγραφή</a></li>
+        <?php
+        }
+        ?>
         <li><a href="#">Σχετικά με εμάς</a></li>
       </ul>
     </nav>
@@ -28,30 +49,7 @@
     
 
     <div class="container">
-
-    <div id="sidebar">
-      <header>Ειδικότητες</header>
-      
-      <?php
-      include("connect.php");
-      $sql = "SELECT * FROM profession";
-              $result = mysqli_query($link, $sql);
-              
-              if (mysqli_num_rows($result) > 0) {
-                echo '<ul id="sidebar_data" name="sidebar_data" > ';
-                echo ' ';
-                while ($row = mysqli_fetch_assoc($result)) {
-                  echo '<li  value="' . $row['id'] . '"> <a href="search.php">' . $row['name'] . '</a></li>';
-                }
-                echo '</ul>'; }
-                ?>
-        
-      
-
-    </div>
    
-
-
       <form action="search.php" class="search-bar" method="POST">
         <input type="text" placeholder="Ειδικότητα" name="profession">
         <input type="text" placeholder="Περιοχή" name="location">
@@ -75,28 +73,3 @@
         </body>
 </html>
 
-<script>
-  const toggle = document.getElementById('toggle');
-  const sidebar = document.getElementById('sidebar');
-
-  document.onclick = function(e){
-    if(e.target.id !== 'sidebar' && e.target.id !== 'toggle'){
-      toggle.classList.remove('active');
-      sidebar.classList.remove('active');
-
-    }
-  }
-
-
-  toggle.onclick = function(){
-    toggle.classList.toggle('active');
-    sidebar.classList.toggle('active');
-  }
-
-  
-</script>
-
-<?php
-    include("connect.php");
-?>
-   

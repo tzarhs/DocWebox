@@ -22,7 +22,23 @@
       </label>
       <ul>
         <li><a href="appointments.php">Τα ραντεβού μου</a></li>
-        <li><a href="doctor_profile.php">Το προφίλ μου</a></li>
-        <li><a href="#">Αποσύνδεση</a></li>
+        <?php
+        if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
+          if($_SESSION['usertype'] == 'doctor'){
+        ?>
+            <li><a href="doctor_profile.php">Το Προφίλ μου</a></li>
+        <?php
+          }elseif($_SESSION['usertype'] == 'patient'){
+        ?>
+           <li><a href="patient_profile.php">Το Προφίλ μου</a></li>         
+        <?php
+        }
+        }else{
+        ?>
+          <li><a href="login.php">Σύνδεση/Εγγραφή</a></li>
+        <?php
+        }
+        ?>
+        <li><a href="logout.php">Αποσύνδεση</a></li>
       </ul>
 </nav>
