@@ -72,8 +72,8 @@ display: none;
 #sidebar {
   position: absolute;
   left: -250px;
-  width: 250px;
-  height: 80%;
+  width: 240px;
+  height: 70%;
   background: #041c2e;
   transition: 0.5s;
 }
