@@ -41,7 +41,7 @@
                 echo '<ul id="sidebar_data" name="sidebar_data" > ';
                 echo ' ';
                 while ($row = mysqli_fetch_assoc($result)) {
-                  echo '<li  value="' . $row['id'] . '">' . $row['name'] . '</li>';
+                  echo '<li  value="' . $row['id'] . '"> <a href="search.php">' . $row['name'] . '</a></li>';
                 }
                 echo '</ul>'; }
                 ?>
