@@ -580,6 +580,7 @@ a:hover,a.active{
  @media screen and (max-width:400px) {
   #contentbox{
     align-items: flex-start;
+    
    }
 
    #func-bts{
