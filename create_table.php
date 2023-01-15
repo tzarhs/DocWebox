@@ -130,7 +130,7 @@
         // Αν δεν υπάρχει δημιούργησέ τον
         echo "Ο πίνακας appointment δεν υπάρχει... ";
         // Δημιουργία πίνακα food
-        $sql = "CREATE TABLE IF NOT EXISTS appointment (id INT(11) AUTO_INCREMENT PRIMARY KEY, date DATETIME,doctor_id INT(11),patient_id INT(11))";
+        $sql = "CREATE TABLE IF NOT EXISTS appointment (id INT(11) AUTO_INCREMENT PRIMARY KEY, date DATE ,time TIME(6) ,doctor_id INT(11),patient_id INT(11))";
         if ($link->query($sql) === TRUE) {
             echo "ΔΗΜΙΟΥΡΓΗΘΗΚΕ!<br/>";
 

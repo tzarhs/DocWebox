@@ -6,6 +6,7 @@ $doc = $_SESSION['doctor_name'];
 
 if(isset($_POST['submit'])){
     $app = mysqli_real_escape_string($link, $_POST['appointment_date']);
+    $time = mysqli_real_escape_string($link,$_POST['appointment_time']);
     $patient = mysqli_real_escape_string($link, $_POST['fullname']);
 
     $query = "SELECT name FROM patient WHERE name = '$patient' ";
@@ -27,7 +28,7 @@ if(isset($_POST['submit'])){
     $row = mysqli_fetch_assoc($result);
     $patient_id = $row['id'];
 
-    $query = "INSERT INTO appointment(date, doctor_id, patient_id) VALUES ('$app', '$doctor_id', '$patient_id')";
+    $query = "INSERT INTO appointment(date,time, doctor_id, patient_id) VALUES ('$app','$time', '$doctor_id', '$patient_id')";
     $result = mysqli_query($link, $query);
     if(!$result){
         echo mysqli_error($link);
