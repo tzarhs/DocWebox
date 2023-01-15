@@ -5,22 +5,15 @@
   list-style: none;
   box-sizing: border-box;
   font-family: sans-serif;
+  
 
 }
-
-
-/* h1 {
- font-size: 24px;
- text-align: center;  
-} */
 
 body{
 position:relative;
 overflow:auto;
 margin:0;
 padding:0;
-
-
 }
 
 nav{
@@ -79,7 +72,17 @@ background-size: cover;
 display:flex;
 align-items: center;
 justify-content: center;
+position: relative;
+}
 
+.container h1 {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 5vw;
+  color: white;
 }
 
 .search-bar{
@@ -126,6 +129,33 @@ height:60px;
 background:#58629b;
 cursor:pointer;
 }
+
+@media (min-width: 576px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav li {
+    margin-right: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container form {
+    display: flex;
+    justify-content: center;
+  }
+
+  form input {
+    margin-right: 10px;
+  }
+}
+
 
 .footer-container { 
 padding-bottom: 4rem;
@@ -237,51 +267,46 @@ left: 0;
   background-image: linear-gradient(rgba(12, 120, 139, 0.9),rgba(0,8,51,0.9)), url(wallpaper.jpg);
   background-position: center;
   background-size: cover;
-  display:flex;
- 
-  }
-  .list h1 {
-    position: relative;
-    top: 00px;
+  
   }
 
-  .list p{
-    display:flex;
-    align-items: center;
-    justify-content: center;
+  .list table {
+    border-collapse: collapse;
+    width:100%;
+  
   }
+ 
+
+  .list th {
+    background-color: #DCDCDC;
+    font-weight: bold;
+    text-align: left;
+    padding: 8px;
+    border: 1px solid black;
+  }
+
+  .list td {
+    text-align: center;
+    padding: 8px;
+    border: 1px solid black;
+  }
+
+
 
   .list button{
    
-      background-color: #e1ecf4;
-      border-radius: 3px;
-      border: 1px solid #7aa7c7;
-      box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
-      box-sizing: border-box;
-      color: #39739d;
-      cursor: pointer;
-      display: inline-block;
-      font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
-      font-size: 13px;
-      font-weight: 400;
-      line-height: 1.15385;
-      margin: 0;
-      outline: none;
-      padding: 8px .8em;
-      position: relative;
-      text-align: center;
-      text-decoration: none;
-      user-select: none;
-      -webkit-user-select: none;
-      touch-action: manipulation;
-      vertical-align: baseline;
-      white-space: nowrap;
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
     }
     
     .list button:hover,
     .list button:focus {
-      background-color: #b3d3ea;
-      color: #2c5777;
+      background-color: #45a049;
     }
     
     .list button:focus {
@@ -293,6 +318,23 @@ left: 0;
       box-shadow: none;
       color: #2c5777;
     }
+
+    @media only screen and (max-width: 600px) {
+      table {
+          width: 100%;
+      }
+      th, td {
+          display: block;
+          width: 100%;
+          text-align: left;
+      }
+      th {
+          font-size: 0.9em;
+      }
+      td {
+          font-size: 0.8em;
+      }
+  }
   
     .appointment {
       width:100%;
@@ -306,6 +348,38 @@ left: 0;
       justify-content: center;
     }
 
-    td {
-      text-align: center;
+
+    .appointment form{
+      width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #f2f2f2;
+      border: 1px solid #ccc;
     }
+
+    .appointment input[type="text"], input[type="date"], input[type="time"] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .appointment input[type="submit"] {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .appointment input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+   
+      
+   

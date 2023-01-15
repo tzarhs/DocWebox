@@ -578,9 +578,7 @@ a:hover,a.active{
  }
 
  @media screen and (max-width:400px) {
-  #contentbox{
-    align-items: flex-start;
-   }
+ 
 
    #func-bts{
     display: flex;
@@ -623,4 +621,15 @@ a:hover,a.active{
   }
  }
 
+ .profile-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
 
+@media only screen and (max-width: 600px) {
+    .profile-container {
+        flex-direction: column;
+    }
+}

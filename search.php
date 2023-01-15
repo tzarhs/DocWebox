@@ -50,13 +50,13 @@
 
         $prof_result = mysqli_query($link, $query);
         ?>
+        
 
-        <table width="100%" cellpadding="2" cellspacing="1" border-color=black>
+        <table>
 	      <tr bgcolor="#DCDCDC">
 	  	  <td style="font-weight:bold">Όνομα</td>
 		    <td style="font-weight:bold">Τοποθεσία</td>
         <td style="font-weight:bold">Ειδικότητα</td>
-        
 	      </tr>
   <?php
     while ($row = mysqli_fetch_array($prof_result)) {
@@ -86,12 +86,11 @@
        echo "<br>";   
         $_SESSION['doctor_name'] = $row['doctor_name'];
 	    }
+      
 	mysqli_close($link);
     }
-  
+      ?>
     
-?>
-
   </div>
 
   </body>
@@ -100,3 +99,4 @@
 <?php
     include("connect.php");
 ?>
+

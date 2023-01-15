@@ -24,7 +24,7 @@
         <a href="index.php"><img src="logo_doctor.png"></a>
       </label>
       <ul>
-        <li><a class="active" href="#">Ειδικότητες</a></li>
+        <li><a class="active" href="#" id="sidebar">Ειδικότητες</a></li>
         <?php
         if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
           if($_SESSION['usertype'] == 'doctor'){
@@ -46,13 +46,16 @@
       </ul>
     </nav>
 
-    <div class="container">
    
-      <form action="search.php" class="search-bar" method="POST">
-        <input type="text" placeholder="Ειδικότητα" name="profession">
-        <input type="text" placeholder="Περιοχή" name="location">
-        <button type="submit" name="submit"><img src="search.png"></button>
-      </form>
+  
+    <div class="container">
+   <h1>Health is Wealth</h1>
+    <form action="search.php" class="search-bar" method="POST">
+  <input type="text" id="profession" placeholder="Ειδικότητα" name="profession">
+  <input type="text" id="location" placeholder="Περιοχή" name="location">
+  <button type="submit" name="submit"><img src="search.png"></button>
+</form>
+
     
     </div>
     

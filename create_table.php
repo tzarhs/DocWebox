@@ -43,7 +43,7 @@
 		)";
         if ($link->query($sql) === TRUE) {
              mysqli_query($link, "INSERT INTO profession (name) VALUES ('Αιματολόγος')");
-             mysqli_query($link, "INSERT INTO profession (name) VALUES ('Αλεργιολόγος')");
+             mysqli_query($link, "INSERT INTO profession (name) VALUES ('Αιματολόγος')");
              mysqli_query($link, "INSERT INTO profession (name) VALUES ('Αναισθησιολόγος')");
              mysqli_query($link, "INSERT INTO profession (name) VALUES ('Γενικός Ιατρός')");
              mysqli_query($link, "INSERT INTO profession (name) VALUES ('Γαστρεντερολόγος')");
