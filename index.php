@@ -25,47 +25,31 @@
       </ul>
     </nav>
 
-    <div id="sidebar">
-      <header>Ειδικότητες</header>
-      <ul>
-        <li><a href="#">Αιματολόγος</a></li>
-        <li><a href="#">Αλεργιολόγος</a></li>
-        <li><a href="#">Αναισθησιολόγος</a></li>
-        <li><a href="#">Γενικός Ιατρός</a></li>
-        <li><a href="#">Γαστρεντερολόγος</a></li>
-        <li><a href="#">Γυναικολόγος</a></li>
-        <li><a href="#">Δερματολόγος</a></li>
-        <li><a href="#">Διαιτολόγος</a></li>
-        <li><a href="#">Καρδιολόγος</a></li>
-        <li><a href="#">Λογοθεραπευτής</a></li>
-        <li><a href="#">Μαστρολόγος</a></li>
-        <li><a href="#">Νευρολόγος</a></li>
-        <li><a href="#">Ογκολόγος</a></li>
-        <li><a href="#">Οδοντίατρος</a></li>
-        <li><a href="#">Ορθοπεδικός</a></li>
-        <li><a href="#">Οφθαλμίατος</a></li>
-        <li><a href="#">Παθολόγος</a></li>
-        <li><a href="#">Παιδίατρος</a></li>
-        <li><a href="#">Πλαστικός Χειρούργος</a></li>
-        <li><a href="#">Ρευματολόγος</a></li>
-        <li><a href="#">Φυσικοθεραπευτής</a></li>
-        <li><a href="#">Ψυχίατρος</a></li>
-        <li><a href="#">Ωτορινολαρυγγολόγος</a></li>
-      </ul>
-    </div>
+    
 
     <div class="container">
-   <!-- <form action="search.php" class="search-bar" method="get">
-    <label for="category">Category:</label><br>
-  <select id="category" name="category">
-    <option value="location">Location</option>
-    <option value="profession">Profession</option>
-  </select><br><br>
-  <label for="keyword">Keyword:</label><br>
-  <input type="text" id="keyword" name="keyword"><br>
-  <input type="submit" value="Search">
-</form> 
--->
+
+    <div id="sidebar">
+      <header>Ειδικότητες</header>
+      
+      <?php
+      include("connect.php");
+      $sql = "SELECT * FROM profession";
+              $result = mysqli_query($link, $sql);
+              
+              if (mysqli_num_rows($result) > 0) {
+                echo '<ul id="sidebar_data" name="sidebar_data" > ';
+                echo ' ';
+                while ($row = mysqli_fetch_assoc($result)) {
+                  echo '<li  value="' . $row['id'] . '">' . $row['name'] . '</li>';
+                }
+                echo '</ul>'; }
+                ?>
+        
+      
+
+    </div>
+   
 
 
       <form action="search.php" class="search-bar" method="POST">
