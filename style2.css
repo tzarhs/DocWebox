@@ -328,6 +328,7 @@ td.t-2{
  }
 
 
+
 input[type="text"], input[type="password"], .tl-data select{
   border:black;
   border-radius: 15px;
@@ -394,9 +395,6 @@ option{
   margin-bottom: 5%;
  }
 
-#func-bts-sg{
-  margin-top:5%;
- }
 
 #edit-btn input[type="submit"]{
   border: 0;
@@ -515,6 +513,14 @@ a:hover,a.active{
   @media screen and (max-width: 547px){
   .footer-3{
     padding-top: 1rem;
+  }
+
+  #center-content{
+    height:50rem;
+  }
+
+  #fun-bts{
+    margin-top: 10%;
   }
   }
 

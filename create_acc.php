@@ -18,8 +18,6 @@
         <a href="index.php"><img src="logo_doctor.png" alt="logo"></a>
       </label>
       <ul>
-        <li><a class="active" href="#">Ειδικότητες</a></li>
-        <li><a href="#">Σύνδεση/Εγγραφή</a></li>
         <li><a href="#">Σχετικά με εμάς</a></li>
       </ul>
 </nav>
@@ -40,6 +38,7 @@
         </div>
         <input type="text" id="username" name="username" placeholder="Full name" required>
         <input type="password" id="password" name="password" placeholder="Password" required>
+        <input type="text" id="email" name="email" placeholder="E-mail" required>
 
           <?php
               include("connect.php");
@@ -61,8 +60,11 @@
           ?>
 
      
-        <input type="text" id="location" name="location" placeholder="Location" style="display:none" >
+        <input type="text" id="city" name="city" placeholder="City" style="display:none" >
+        <input type="text" id="address" name="address" placeholder="Address" style="display:none" >
+        <input type="text" id="tek" name="tel" placeholder="Telephone" style="display:none" >
         <input type="submit" name="submit" value="Sign up">
+        
 
         <a id="acc" href="login.php">Already have an account?</a>
 </form>

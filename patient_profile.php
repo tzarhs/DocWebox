@@ -42,6 +42,7 @@
           while($row=mysqli_fetch_array($result)){
             if (mysqli_num_rows($result) == 1) {       
               $_SESSION['id'] = $row['id'];
+              $_SESSION['email']  = $row['email'];
             }  
             
         ?>
@@ -57,6 +58,10 @@
                       <tr id="trow-1">
                       <td class="tl-1"><div align="left" id="tb-name">Username:</div></td>
                       <td class="tl-4"> <?php echo '&nbsp;&nbsp;' . $_SESSION['username']; ?></td>
+                      </tr>   
+                      <tr id="trow-1">
+                      <td class="tl-1"><div align="left" id="tb-name">E-mail:</div></td>
+                      <td class="tl-4"> <?php echo '&nbsp;&nbsp;' . $_SESSION['email']; ?></td>
                       </tr>   
                                                                 
                     
