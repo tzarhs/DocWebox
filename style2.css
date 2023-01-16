@@ -623,4 +623,57 @@ a:hover,a.active{
   }
  }
 
+ 
+ #appointments {
+  width: 45%;
+  margin: 0 auto;
+}
 
+#appointments h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 40px;
+
+}
+
+#appointments ul {
+  list-style: none;
+  padding: 0;
+}
+
+#appointments li {
+  
+  text-align: center;
+  font-size: large;
+
+  color: white;
+  background-color: #22313F;
+  border-radius:20px;
+  min-height: 0px;
+  -webkit-box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.85);
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 25px;
+}
+
+
+input[id="appointment_edit"]{
+  border: 0;
+  background: rgb(255, 255, 255,0.5);
+  display: block;
+  margin: 30px auto;
+  text-align: center;
+  border: 2px solid rgb(46, 162, 185);
+  padding: 10px 10px;
+  width: auto;
+  outline: none;
+  color: black ;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
+input[id="appointment_edit"]:hover{
+  background: #3385bc;
+
+}
