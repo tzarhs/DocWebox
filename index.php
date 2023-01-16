@@ -32,6 +32,7 @@
             <li><a href="doctor_profile.php">Το Προφίλ μου</a></li>
         <?php
           }elseif($_SESSION['usertype'] == 'patient'){
+            $username = $_SESSION['username'];
         ?>
            <li><a href="patient_profile.php">Το Προφίλ μου</a></li>         
         <?php
@@ -73,4 +74,3 @@
     </div>
   </body>
 </html>
-

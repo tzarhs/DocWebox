@@ -578,14 +578,7 @@ a:hover,a.active{
  }
 
  @media screen and (max-width:400px) {
-<<<<<<< HEAD
  
-=======
-  #contentbox{
-    align-items: flex-start;
-    
-   }
->>>>>>> b5c1d6edac16c3241b816fff7379b8e05f373392
 
    #func-bts{
     display: flex;

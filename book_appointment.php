@@ -3,17 +3,18 @@ include("connect.php");
 session_start();
 
 $doc = $_SESSION['doctor_name'];
+$patient= $_SESSION['username'];
 
 if(isset($_POST['submit'])){
     $app = mysqli_real_escape_string($link, $_POST['appointment_date']);
     $time = mysqli_real_escape_string($link,$_POST['appointment_time']);
-    $patient = mysqli_real_escape_string($link, $_POST['fullname']);
+    /*$patient = mysqli_real_escape_string($link, $_POST['fullname']);*/
 
     $query = "SELECT name FROM patient WHERE name = '$patient' ";
     $result = mysqli_query($link,$query);
     $row = mysqli_fetch_assoc($result);
     if(!($row)){
-        echo "<script>alert('Πρέπει να εγγραφείτε σαν χρήστης!'); 
+        echo "<script>alert('Πρέπει να συνδεθέιτε σαν χρήστης!'); 
         window.location.href='create_acc.php';</script>";
 
     }
