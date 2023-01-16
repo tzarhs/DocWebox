@@ -103,7 +103,7 @@ display: none;
   left: 0;
 }
 
-#sidebar_data a{
+#sidebar_data a {
   color: #a0c7e4;
 }
 
@@ -206,19 +206,27 @@ color: rgb(211, 156, 7);
 transition: 0.5s ease-out;
 }
 
-@media (max-width: 952px){
+@media screen and (max-width: 952px){
   
 nav ul li a{
   font-size: 16px;
 }
+#sidebar{
+  top: 80px;
 }
 
-@media (max-width: 858px){
+}
+
+@media screen and (max-width: 858px){
 .checkbtn{
   display: block;
 }
 
-ul{
+#sidebar{
+  top: 80px;
+}
+
+nav ul{
 position: absolute;
 width: 100%;
 height: 100vh;
@@ -253,11 +261,17 @@ left: 0;
 .footer{
     padding-top:  2rem;
 }
+#sidebar{
+  top: 80px;
+}
 }
 
 @media screen and (max-width: 720px){
 .footer-1{
      display: none;
+}
+#sidebar{
+  top: 80px;
 }
 }
 
@@ -265,6 +279,9 @@ left: 0;
 @media screen and (max-width: 547px){
 .footer-3{
   padding-top: 1rem;
+}
+#sidebar{
+  top: 80px;
 }
 }
 

@@ -67,7 +67,7 @@
                   echo '<li  value="' . $row['id'] . '"> <a href="search.php">' . $row['name'] . '</a></li>';
                 }
                 echo '</ul>'; }
-                ?>
+      ?>
         
       
 
