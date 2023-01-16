@@ -215,7 +215,7 @@ nav ul li a{
 }
 
 ul{
-position: fixed;
+position: absolute;
 width: 100%;
 height: 100vh;
 background: #2c3e50;
