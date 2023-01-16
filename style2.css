@@ -328,6 +328,7 @@ td.t-2{
  }
 
 
+
 input[type="text"], input[type="password"], .tl-data select{
   border:black;
   border-radius: 15px;
@@ -376,7 +377,7 @@ option{
   border:none;
   color:#fff;
   cursor:pointer;
-  font-size:1.5rem;
+  font-size:1.3rem;
   font-weight:bold;
   border-radius:8px;
   line-height:1;
@@ -394,9 +395,6 @@ option{
   margin-bottom: 5%;
  }
 
-#func-bts-sg{
-  margin-top:5%;
- }
 
 #edit-btn input[type="submit"]{
   border: 0;
@@ -516,6 +514,14 @@ a:hover,a.active{
   .footer-3{
     padding-top: 1rem;
   }
+
+  #center-content{
+    height:50rem;
+  }
+
+  #fun-bts{
+    margin-top: 10%;
+  }
   }
 
   @media screen and (max-width: 1185px){
@@ -580,6 +586,7 @@ a:hover,a.active{
  @media screen and (max-width:400px) {
   #contentbox{
     align-items: flex-start;
+    
    }
 
    #func-bts{

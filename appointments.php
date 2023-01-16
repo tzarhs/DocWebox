@@ -32,10 +32,12 @@
             }else if ($_SESSION['id'] && $_SESSION['usertype'] == 'patient'){
               echo '<li><a href="patient_profile.php">Το προφίλ μου</a></li>';
 
+          }else{
+            echo '<li><a href="login.php">Σύνδεση/Εγγραφή</a></li>';
+
           }
         
         ?>
-        <!--<li><a href="doctor_profile.php">Το προφίλ μου</a></li>-->
         <li><a href="logout.php">Αποσύνδεση</a></li>
       </ul>
 </nav>

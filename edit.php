@@ -43,10 +43,12 @@
                 $id =  $_SESSION['id'];
                 $username = $_POST['username'];
                 $password = $_POST['password'];
-                $location = $_POST['location'];
+                $city = $_POST['city'];
+                $address = $_POST['address'];
                 $profession_id = $_POST['profession_id'];
 
-                $query1 = "UPDATE doctor set doctor_name='$username', password = '$password', profession_id='$profession_id', location='$location'
+
+                $query1 = "UPDATE doctor set doctor_name='$username', password = '$password', profession_id='$profession_id', city='$city', adress = '$address'
                           WHERE id = '$id'";                
                 $result1 = mysqli_query($link, $query1) or die("Query error: " . mysqli_error($link)); 
                 
@@ -55,7 +57,7 @@
             }else if ($_SESSION['id'] && $_SESSION['usertype'] == 'doctor') {
                 $gid=$_SESSION['id'];
                           
-                $result3 = mysqli_query($link,"SELECT doctor.doctor_name, profession.name, profession.id, doctor.location, doctor.password
+                $result3 = mysqli_query($link,"SELECT doctor.doctor_name, profession.name, profession.id, doctor.city, doctor.password, doctor.adress
                                                 FROM profession   
                                                 INNER JOIN doctor ON profession.id = doctor.profession_id
                                                 WHERE doctor.id = '$gid'");
@@ -98,8 +100,13 @@
                             </tr>
                                             
                             <tr id="trow-1">
-                            <td class="tl-name"><div align="left" id="tb-name">Location:</div></td>                
-                            <td class="tl-data"> <input id ="tb-input" name="location" type="text" value="<?=$row3[3];?>" size="50"></td>
+                            <td class="tl-name"><div align="left" id="tb-name">City:</div></td>                
+                            <td class="tl-data"> <input id ="tb-input" name="city" type="text" value="<?=$row3[3];?>" size="50"></td>
+                            </tr>
+
+                            <tr id="trow-1">
+                            <td class="tl-name"><div align="left" id="tb-name">Address:</div></td>                
+                            <td class="tl-data"> <input id ="tb-input" name="address" type="text" value="<?=$row3[5];?>" size="50"></td>
                             </tr>
 
                             <tr>
@@ -116,8 +123,9 @@
                 $id =  $_SESSION['id'];
                 $username = $_POST['username'];
                 $password = $_POST['password'];
+                $email = $_POST['email'];
       
-                $query5 = "UPDATE patient set name='$username', password = '$password'
+                $query5 = "UPDATE patient set name='$username', password = '$password', email = '$email'
                           WHERE id = '$id'";                
                 $result5 = mysqli_query($link, $query5) or die("Query error: " . mysqli_error($link));
 
@@ -127,7 +135,7 @@
             }else if ($_SESSION['id'] && $_SESSION['usertype'] == 'patient') {
               $gid=$_SESSION['id'];
                         
-              $result6 = mysqli_query($link,"SELECT name, password FROM patient WHERE id = '$gid'");
+              $result6 = mysqli_query($link,"SELECT name, password, email FROM patient WHERE id = '$gid'");
               while ($row6 = mysqli_fetch_array($result6)) {
               ?>
                   <form action="" method="POST" id="signin" id="reg">
@@ -142,10 +150,15 @@
                           <tr id="trow-1">
                           <td class="tl-name"><div align="left" id="tb-name">Password:</div></td>
                           <td class="tl-data"> <input id = "tb-input" name="password" type="text" value="<?=$row6[1];?>" size="50"></td>
-                          </tr>      
+                          </tr> 
+                          
+                          <tr id="trow-1">
+                          <td class="tl-name"><div align="left" id="tb-name">E-mail:</div></td>
+                          <td class="tl-data"> <input id = "tb-input" name="email" type="text" value="<?=$row6[2];?>" size="50"></td>
+                          </tr>
                            
                           <tr>
-                          <td colspan="2"><input name="submit-edit" type="submit"></td>
+                          <td id="edit-btn" colspan="2"><input name="submit-edit" type="submit"></td>
                           </tr>
                       </table>
                   </form>

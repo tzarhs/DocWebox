@@ -24,7 +24,7 @@
       </label>
       <ul>
         <li><a href="appointments.php">Τα ραντεβού μου</a></li>
-        <li><a href="doctor_profile.php">Το προφίλ μου</a></li>
+        <li><a href="doctor_profile.php"><?php echo $_SESSION['username']?></a></li>
       </ul>
 </nav>
 
@@ -41,7 +41,8 @@
 
           while($row=mysqli_fetch_array($result)){
             if (mysqli_num_rows($result) == 1) {
-              $_SESSION['location'] = $row['location'];
+              $_SESSION['city'] = $row['city'];
+              $_SESSION['address'] = $row['adress'];
 
               $prof_query="SELECT profession.name, doctor.id
                           FROM profession   
@@ -76,8 +77,13 @@
                     </tr>
                                       
                     <tr id="trow-1">
-                    <td class="tl-1"><div align="left" id="tb-name">Location:</div></td>                
-                    <td class="tl-4"> <?php echo '&nbsp;&nbsp;' . $_SESSION['location']; ?></td>
+                    <td class="tl-1"><div align="left" id="tb-name">City:</div></td>                
+                    <td class="tl-4"> <?php echo '&nbsp;&nbsp;' . $_SESSION['city']; ?></td>
+                    </tr>
+
+                    <tr id="trow-1">
+                    <td class="tl-1"><div align="left" id="tb-name">Address:</div></td>                
+                    <td class="tl-4"> <?php echo '&nbsp;&nbsp;' . $_SESSION['address']; ?></td>
                     </tr>
                   </table>
               </form>
