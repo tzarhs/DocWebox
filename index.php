@@ -24,7 +24,13 @@
         <a href="index.php"><img src="logo_doctor.png"></a>
       </label>
       <ul>
+<<<<<<< HEAD
         <li><a class="active" href="#" id="sidebar">Ειδικότητες</a></li>
+=======
+        <li><a href="#sidebar" id="toggle">Ειδικότητες</a></li>
+        
+        
+>>>>>>> f2f8660f0d43541a1acb3dbff2802ced27daa53f
         <?php
         if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
           if($_SESSION['usertype'] == 'doctor'){
@@ -47,6 +53,36 @@
       </ul>
     </nav>
 
+<<<<<<< HEAD
+=======
+    
+
+    <div class="container">
+
+    <div id="sidebar">
+      <header>Ειδικότητες</header>
+      
+      <?php
+      include("connect.php");
+      $sql = "SELECT * FROM profession";
+              $result = mysqli_query($link, $sql);
+              
+              if (mysqli_num_rows($result) > 0) {
+                echo '<ul id="sidebar_data" name="sidebar_data" > ';
+                echo ' ';
+                while ($row = mysqli_fetch_assoc($result)) {
+                  echo '<li  value="' . $row['id'] . '"> <a href="search.php">' . $row['name'] . '</a></li>';
+                }
+                echo '</ul>'; }
+      ?>
+        
+      
+
+    </div>
+   
+
+
+>>>>>>> f2f8660f0d43541a1acb3dbff2802ced27daa53f
    
   
     <div class="container">
@@ -71,6 +107,38 @@
                 <h3><a href="#">Πολιτική Απορρήτου</a></h3></div>
             <div class="footer-heading footer-3">
                 <h3><a href="#">Όροι Χρήσης</a></h3></div>
+<<<<<<< HEAD
     </div>
   </body>
 </html>
+=======
+        </div>
+        </body>
+</html>
+
+<script>
+  const toggle = document.getElementById('toggle');
+  const sidebar = document.getElementById('sidebar');
+
+  document.onclick = function(e){
+    if(e.target.id !== 'sidebar' && e.target.id !== 'toggle'){
+      toggle.classList.remove('active');
+      sidebar.classList.remove('active');
+
+    }
+  }
+
+
+  toggle.onclick = function(){
+    toggle.classList.toggle('active');
+    sidebar.classList.toggle('active');
+  }
+
+  
+</script>
+
+<?php
+    include("connect.php");
+?>
+   
+>>>>>>> f2f8660f0d43541a1acb3dbff2802ced27daa53f

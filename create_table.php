@@ -1,10 +1,10 @@
 <?php
 	include("connect.php");
 
-	//if(mysqli_query($link,"DESCRIBE patient")){
+	if(mysqli_query($link,"DESCRIBE patient")){
 
-	//}
-	//else{
+	}
+	else{
 		echo "Ο πίνακας patient δεν υπάρχει... ";
 
 		$sql="CREATE TABLE IF NOT EXISTS patient (	id INT(100) AUTO_INCREMENT PRIMARY KEY,	name VARCHAR(60) NOT NULL, password VARCHAR(60) NOT NULL, appointment_id INT(100) NOT NULL, email VARCHAR(100) NOT NULL)";
@@ -14,12 +14,12 @@
 		else{
 			echo "Πρόβλημα στη δημιουργία του πίνακα data: ".$link->error."<br/>";
 		}
-	//}
+	}
    
-  //if(mysqli_query($link,"DESCRIBE doctor  ")){
+  if(mysqli_query($link,"DESCRIBE doctor  ")){
 
-	//}
-	//else{
+	}
+	else{
 		echo "Ο πίνακας doctor δεν υπάρχει... ";
 
 		$sql="CREATE TABLE IF NOT EXISTS doctor (id INT(100) AUTO_INCREMENT PRIMARY KEY, profession_id INT(100) not null,appointment_id INT(100) not null, doctor_name VARCHAR(60) NOT NULL, password VARCHAR(60) NOT NULL, city VARCHAR(60) NOT NULL, adress VARCHAR(100) NOT NULL, tel VARCHAR(30) NOT NULL )";
@@ -81,11 +81,11 @@
 			}else{
 			    echo "Πρόβλημα στη δημιουργία του πίνακα data: ".$link->error."<br/>";
 		}
-//}
+}
  
-   // if(mysqli_query($link,"DESCRIBE  profession ")){
+    if(mysqli_query($link,"DESCRIBE  profession ")){
         // Αν υπάρχει μην κάνεις τίποτε
-   // }else{
+   }else{
         // Αν δεν υπάρχει δημιούργησέ τον
         echo "Ο πίνακας profession δεν υπάρχει... ";
 		// Δημιουργία πίνακα profession
@@ -121,12 +121,12 @@
         } else {
             echo "Πρόβλημα στη δημιουργία του πίνακα profession: " . $link->error . "<br/>";
         }
-   //} 
+   } 
 
     
-   // if(mysqli_query($link,"DESCRIBE  appointment")){
+   if(mysqli_query($link,"DESCRIBE  appointment")){
         
-     //}else{
+     }else{
         // Αν δεν υπάρχει δημιούργησέ τον
         echo "Ο πίνακας appointment δεν υπάρχει... ";
         // Δημιουργία πίνακα food
@@ -137,7 +137,7 @@
         } else {
             echo "Πρόβλημα στη δημιουργία του πίνακα appointment: " . $link->error . "<br/>";
         }
-   //}
+   }
 
 
     mysqli_close($link);
