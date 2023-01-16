@@ -627,19 +627,6 @@ a:hover,a.active{
   }
  }
 
-<<<<<<< HEAD
- .profile-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-
-@media only screen and (max-width: 600px) {
-    .profile-container {
-        flex-direction: column;
-    }
-=======
  
  #appointments {
   width: 45%;
@@ -693,5 +680,4 @@ input[id="appointment_edit"]{
 input[id="appointment_edit"]:hover{
   background: #3385bc;
 
->>>>>>> f2f8660f0d43541a1acb3dbff2802ced27daa53f
 }

@@ -24,13 +24,9 @@
         <a href="index.php"><img src="logo_doctor.png"></a>
       </label>
       <ul>
-<<<<<<< HEAD
-        <li><a class="active" href="#" id="sidebar">Ειδικότητες</a></li>
-=======
         <li><a href="#sidebar" id="toggle">Ειδικότητες</a></li>
         
         
->>>>>>> f2f8660f0d43541a1acb3dbff2802ced27daa53f
         <?php
         if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
           if($_SESSION['usertype'] == 'doctor'){
@@ -53,18 +49,15 @@
       </ul>
     </nav>
 
-<<<<<<< HEAD
-=======
     
 
     <div class="container">
-
-    <div id="sidebar">
-      <header>Ειδικότητες</header>
+      <div id="sidebar">
+        <header>Ειδικότητες</header>
       
-      <?php
-      include("connect.php");
-      $sql = "SELECT * FROM profession";
+        <?php
+          include("connect.php");
+          $sql = "SELECT * FROM profession";
               $result = mysqli_query($link, $sql);
               
               if (mysqli_num_rows($result) > 0) {
@@ -78,22 +71,15 @@
         
       
 
-    </div>
+      </div>
    
-
-
->>>>>>> f2f8660f0d43541a1acb3dbff2802ced27daa53f
-   
-  
-    <div class="container">
    <h1>Health is Wealth</h1>
     <form action="search.php" class="search-bar" method="POST">
-  <input type="text" id="profession" placeholder="Ειδικότητα" name="profession">
-  <input type="text" id="location" placeholder="Περιοχή" name="location">
-  <button type="submit" name="submit"><img src="search.png"></button>
-</form>
+      <input type="text" id="profession" placeholder="Ειδικότητα" name="profession">
+      <input type="text" id="location" placeholder="Περιοχή" name="location">
+      <button type="submit" name="submit"><img src="search.png"></button>
+    </form>
 
-    
     </div>
     
         <div class="footer">
@@ -107,11 +93,6 @@
                 <h3><a href="#">Πολιτική Απορρήτου</a></h3></div>
             <div class="footer-heading footer-3">
                 <h3><a href="#">Όροι Χρήσης</a></h3></div>
-<<<<<<< HEAD
-    </div>
-  </body>
-</html>
-=======
         </div>
         </body>
 </html>
@@ -141,4 +122,3 @@
     include("connect.php");
 ?>
    
->>>>>>> f2f8660f0d43541a1acb3dbff2802ced27daa53f
