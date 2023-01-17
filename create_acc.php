@@ -72,7 +72,7 @@
      
         <input type="text" id="city" name="city" placeholder="City" style="display:none" >
         <input type="text" id="address" name="address" placeholder="Address" style="display:none" >
-        <input type="text" id="tek" name="tel" placeholder="Telephone" style="display:none" >
+        <input type="text" id="tel" name="tel" placeholder="Telephone" style="display:none" >
         <input type="submit" name="submit" value="Sign up">
         
 

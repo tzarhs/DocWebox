@@ -34,6 +34,7 @@
             <li><a href="doctor_profile.php">Το Προφίλ μου</a></li>
         <?php
           }elseif($_SESSION['usertype'] == 'patient'){
+            $username = $_SESSION['username'];
         ?>
            <li><a href="patient_profile.php">Το Προφίλ μου</a></li>         
         <?php
@@ -51,13 +52,12 @@
     
 
     <div class="container">
-
-    <div id="sidebar">
-      <header>Ειδικότητες</header>
+      <div id="sidebar">
+        <header>Ειδικότητες</header>
       
-      <?php
-      include("connect.php");
-      $sql = "SELECT * FROM profession";
+        <?php
+          include("connect.php");
+          $sql = "SELECT * FROM profession";
               $result = mysqli_query($link, $sql);
               
               if (mysqli_num_rows($result) > 0) {
@@ -67,21 +67,19 @@
                   echo '<li  value="' . $row['id'] . '"> <a href="search.php">' . $row['name'] . '</a></li>';
                 }
                 echo '</ul>'; }
-                ?>
+      ?>
         
       
 
-    </div>
+      </div>
    
+   <h1>Health is Wealth</h1>
+    <form action="search.php" class="search-bar" method="POST">
+      <input type="text" id="profession" placeholder="Ειδικότητα" name="profession">
+      <input type="text" id="location" placeholder="Περιοχή" name="location">
+      <button type="submit" name="submit"><img src="search.png"></button>
+    </form>
 
-
-   
-      <form action="search.php" class="search-bar" method="POST">
-        <input type="text" placeholder="Ειδικότητα" name="profession">
-        <input type="text" placeholder="Περιοχή" name="location">
-        <button type="submit" name="submit"><img src="search.png"></button>
-      </form>
-    
     </div>
     
         <div class="footer">

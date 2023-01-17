@@ -29,34 +29,39 @@
 <?php
     include("connect.php");
     session_Start();
-
+    /*$username = $_SESSION['username'];*/
+    
     if(isset($_POST['submit'])){
         $loc = $_POST['location'];
         $prof = $_POST['name'];
         
 
     if(!empty($loc) && !empty($prof)){
-        $query="SELECT profession.name,doctor.doctor_name,doctor.location
+        $query="SELECT profession.name,doctor.doctor_name,doctor.city,doctor.adress,
+        doctor.tel
         FROM profession   
         INNER JOIN doctor ON  profession.id = doctor.profession_id
-        WHERE doctor.location='$loc' AND profession.name='$prof' ";
+        WHERE doctor.city='$loc' AND profession.name='$prof' ";
     } else {
       
-         $query="SELECT profession.name,doctor.doctor_name,doctor.location
+         $query="SELECT profession.name,doctor.doctor_name,doctor.city,doctor.adress,
+         doctor.tel
         FROM profession   
         INNER JOIN doctor ON  profession.id = doctor.profession_id
-        WHERE doctor.location='$loc' OR profession.name='$prof' ";
+        WHERE doctor.city='$loc' OR profession.name='$prof' ";
     }
 
         $prof_result = mysqli_query($link, $query);
         ?>
+        
 
-        <table width="100%" cellpadding="2" cellspacing="1" border-color=black>
+        <table>
 	      <tr bgcolor="#DCDCDC">
 	  	  <td style="font-weight:bold">Όνομα</td>
 		    <td style="font-weight:bold">Τοποθεσία</td>
         <td style="font-weight:bold">Ειδικότητα</td>
-        
+        <td style="font-weight:bold">Οδός</td>
+        <td style="font-weight:bold">Τηλέφωνο</td>
 	      </tr>
   <?php
     while ($row = mysqli_fetch_array($prof_result)) {
@@ -69,11 +74,19 @@
 		    </td>
 
         <td bgcolor="#DCDCDC">
-		    <?=$row['location']?>
+		    <?=$row['city']?>
 		    </td>
         
         <td bgcolor="#DCDCDC">
 		    <?=$row['name']?>
+		    </td>
+
+        <td bgcolor="#DCDCDC">
+		    <?=$row['adress']?>
+		    </td>
+
+        <td bgcolor="#DCDCDC">
+		    <?=$row['tel']?>
 		    </td>
         
       
@@ -86,12 +99,11 @@
        echo "<br>";   
         $_SESSION['doctor_name'] = $row['doctor_name'];
 	    }
+      
 	mysqli_close($link);
     }
-  
+      ?>
     
-?>
-
   </div>
 
   </body>
@@ -100,3 +112,4 @@
 <?php
     include("connect.php");
 ?>
+
