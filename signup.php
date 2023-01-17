@@ -1,17 +1,19 @@
+<?php
+    session_start();
+    include("connect.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <title>Document</title>
 </head>
 <body>
 <?php
-
-session_start();
-include 'connect.php';
-
 
 if (isset( $_POST['submit'])) {
 
@@ -29,9 +31,9 @@ if (isset( $_POST['submit'])) {
                 $result1 = mysqli_query($link, $query1);
 
                 if (mysqli_num_rows($result1) > 0) {
-                        $error = "Signup Failed! Username already exists";
-                        echo "<script type='text/javascript'>alert('$error');</script>";
-                        header('location: login.php?login=failed');
+                        $_SESSION['alert_message_error'] = 'Signup Failed! Username already exists';
+                        header('location: create_acc.php?login=failed');
+                        
                 }else{
                         mysqli_query($link,"INSERT INTO patient(name, password, email)
                         VALUES ('$username', '$password', '$email')");
@@ -45,9 +47,9 @@ if (isset( $_POST['submit'])) {
                 $result2 = mysqli_query($link, $query2);
 
                 if (mysqli_num_rows($result2) > 0) {
-                        $error = "Signup Failed! Username already exists";
-                        echo "<script type='text/javascript'>alert('$error');</script>";
-                        header('location: login.php?login=failed');
+                        $_SESSION['alert_message_error'] = 'Signup Failed! Username already exists';
+                        header('location: create_acc.php?login=failed');
+                      
                 }else{
                         mysqli_query($link,"INSERT INTO doctor(profession_id, city, doctor_name, password, adress, tel)
                         VALUES ('$profession','$city', '$username', '$password', '$address', '$tel')");

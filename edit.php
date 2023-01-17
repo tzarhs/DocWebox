@@ -10,6 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style2.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.24/sweetalert2.all.js"></script>
     <title>Edit Profile</title>
 </head>
 
@@ -52,7 +53,9 @@
                           WHERE id = '$id'";                
                 $result1 = mysqli_query($link, $query1) or die("Query error: " . mysqli_error($link)); 
                 
+                $_SESSION['alert_message_edit_success'] = 'Data edited successfully!';
                 header('location: doctor_profile.php?doctor_update=success');
+              
             /* Άμα ο χρήστης είναι γιατρός και δεν έχει αλλάξει τα στοιχεία του */     
             }else if ($_SESSION['id'] && $_SESSION['usertype'] == 'doctor') {
                 $gid=$_SESSION['id'];
@@ -128,9 +131,9 @@
                 $query5 = "UPDATE patient set name='$username', password = '$password', email = '$email'
                           WHERE id = '$id'";                
                 $result5 = mysqli_query($link, $query5) or die("Query error: " . mysqli_error($link));
-
+                $_SESSION['alert_message_edit_success'] = 'Data edited successfully!';
                 header('location: patient_profile.php?patient_update=success');
-
+                              
             /* Άμα ο χρήστης είναι ασθενής και δεν έχει αλλάξει τα στοιχεία του */     
             }else if ($_SESSION['id'] && $_SESSION['usertype'] == 'patient') {
               $gid=$_SESSION['id'];
@@ -158,7 +161,7 @@
                           </tr>
                            
                           <tr>
-                          <td id="edit-btn" colspan="2"><input name="submit-edit" type="submit"></td>
+                          <td id="edit-btn" colspan="2"><input name="submit1" type="submit"></td>
                           </tr>
                       </table>
                   </form>
