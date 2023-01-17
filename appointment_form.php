@@ -28,7 +28,7 @@
   <?php
     include("connect.php");
     session_start();
-
+    $_SESSION['doctor_name'] = $_POST['doctor_name'];
     /*$username = $_SESSION['username'];*/
     
   ?>
