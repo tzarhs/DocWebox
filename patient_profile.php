@@ -14,6 +14,13 @@
 </head>
 <body>
 
+<?php
+  if (isset($_SESSION['alert_message_edit_success'])) {
+      echo '<div class="alert alert-success" role="alert">'.$_SESSION['alert_message_edit_success'].'</div>';
+      unset($_SESSION['alert_message_edit_success']);
+  }
+?>
+
 <nav>
       <input type="checkbox" id="check">
       <label for="check" class="checkbtn">
@@ -97,7 +104,7 @@
            <h3><a href="#">Πολιτική Απορρήτου</a></h3></div>
       <div class="footer-heading footer-3">
             <h3><a href="#">Όροι Χρήσης</a></h3></div>
-</div>
+        </div>
 </body>
 </html>
 

@@ -5,7 +5,10 @@
   list-style: none;
   box-sizing: border-box;
   font-family: sans-serif;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 140d802add10e85da34cf5a432103218555f29f7
 }
 
 body{
@@ -17,7 +20,7 @@ padding:0;
 
 nav{
 background: #0082e6;
-height: 80px;
+height: 90px;
 width: 100%;
 }
 

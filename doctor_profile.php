@@ -54,7 +54,7 @@
                   $_SESSION['profession'] = $row['name'];
                   $_SESSION['id'] = $row['id'];
                 }  
-            
+                          
           }   
         ?>
           <div id="signup-info">
