@@ -33,7 +33,7 @@ if (isset( $_POST['submit'])) {
                 if (mysqli_num_rows($result1) > 0) {
                         $_SESSION['alert_message_error'] = 'Signup Failed! Username already exists';
                         header('location: create_acc.php?login=failed');
-                        
+                        exit;
                 }else{
                         mysqli_query($link,"INSERT INTO patient(name, password, email)
                         VALUES ('$username', '$password', '$email')");
@@ -49,7 +49,7 @@ if (isset( $_POST['submit'])) {
                 if (mysqli_num_rows($result2) > 0) {
                         $_SESSION['alert_message_error'] = 'Signup Failed! Username already exists';
                         header('location: create_acc.php?login=failed');
-                      
+                        exit;
                 }else{
                         mysqli_query($link,"INSERT INTO doctor(profession_id, city, doctor_name, password, adress, tel)
                         VALUES ('$profession','$city', '$username', '$password', '$address', '$tel')");

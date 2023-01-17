@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    include("connect.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,11 +17,12 @@
 
 <?php
   if (isset($_SESSION['alert_message_error'])) {
-      echo '<div class="alert alert-danger" role="alert">'.$_SESSION['alert_message_error'].'</div>';
+      
+      echo '<div class="alert alert-danger" role="alert" fade in>'.$_SESSION['alert_message_error'].'</div>';
       unset($_SESSION['alert_message_error']);
   }
-?>
 
+?>
 <nav>
       <input type="checkbox" id="check">
       <label for="check" class="checkbtn">
@@ -49,8 +55,7 @@
         <input type="text" id="email" name="email" placeholder="E-mail" required>
 
           <?php
-              session_start();
-              include("connect.php");
+              
               
               $sql = "SELECT * FROM profession";
               $result = mysqli_query($link, $sql);
@@ -72,7 +77,7 @@
      
         <input type="text" id="city" name="city" placeholder="City" style="display:none" >
         <input type="text" id="address" name="address" placeholder="Address" style="display:none" >
-        <input type="text" id="tel" name="tel" placeholder="Telephone" style="display:none" >
+        <input type="text" id="tek" name="tel" placeholder="Telephone" style="display:none" >
         <input type="submit" name="submit" value="Sign up">
         
 
