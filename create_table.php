@@ -42,7 +42,7 @@
              mysqli_query($link, "INSERT INTO doctor (profession_id, doctor_name, password, city, adress, tel) VALUES (17, 'Σταμάτιος Παπαγεωργίου', 12345, 'Θεσσαλονίκη', 'Λεωφόρος Κωστόπουλος, 926, 75894, Νεάπολη', '23 1124 2140')");
              mysqli_query($link, "INSERT INTO doctor (profession_id, doctor_name, password, city, adress, tel) VALUES (18, 'Ευφροσύνη Δελή', 12345, 'Ρέθυμνο', 'Όδος Κεδίκογλου, 60-10, 25299, Ρέθυμνο', '21 9128 8215')");
              mysqli_query($link, "INSERT INTO doctor (profession_id, doctor_name, password, city, adress, tel) VALUES (19, 'Βάιος Μάμος ', 12345, 'Αθήνα', Λεωφόρος Ράφτη, 4-7, 052 45, Μαρούσι', '21 0123 0178')");
-             mysqli_query($link, "INSERT INTO doctor (profession_id, doctor_name, password, city, adress, tel) VALUES (20, 'Στέργιος Καζάκος', 12345, 'Ξάνθη', 'Όδος Κωνσταντίνου, 61-93, 848 14, Ξάνθη', '241 1239 0718')");
+             mysqli_query($link, "INSERT INTO doctor (profession_id, doctor_name, password, city, adress, tel) VALUES (20, 'Στέργιος Καζάκος', 12345, 'Ξάνθη', 'Όδος Κωνσταντίνου, 61-93, 848 14, Ξάνθη', '25 1239 0718')");
              mysqli_query($link, "INSERT INTO doctor (profession_id, doctor_name, password, city, adress, tel) VALUES (21, 'Βάιος Λαζόπουλος', 12345, 'Χανιά', 'Όδος Θεωδωρίδου, 7-8, 560 78, Πλατανιάς', '24 5123 4891')");
              mysqli_query($link, "INSERT INTO doctor (profession_id, doctor_name, password, city, adress, tel) VALUES (22, 'Ανδρεάς Γιαλαμάς ', 12345, 'Δράμα', 'Όδος Φωτιάδου, 07, 66771, Δράμα', '21 1204 8019')");
              mysqli_query($link, "INSERT INTO doctor (profession_id, doctor_name, password, city, adress, tel) VALUES (23, 'Στεριανή Παπανδρέου', 12345, 'Αθήνα', 'Όδος Παπαδοπούλου, 37, 325 34, Μαρούσι', '21 0891 0812')");
