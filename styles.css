@@ -64,9 +64,10 @@ display: none;
   position: absolute;
   left: -250px;
   width: 240px;
-  height: 70%;
+  
   background: #041c2e;
   transition: 0.5s;
+  top:80px;
 }
 
 #sidebar header {
@@ -108,7 +109,7 @@ background-size: cover;
 display:flex;
 align-items: center;
 justify-content: center;
-position: relative;
+/*position: relative;*/
 }
 
 .container h1 {
@@ -166,7 +167,7 @@ background:#58629b;
 cursor:pointer;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 858px) {
   nav {
     display: flex;
     justify-content: space-between;
@@ -180,6 +181,8 @@ cursor:pointer;
     margin-right: 10px;
   }
 }
+
+
 
 @media (min-width: 768px) {
   .container form {
@@ -326,7 +329,6 @@ left: 0;
   .list table {
     border-collapse: collapse;
     width:100%;
-  
   }
  
 
@@ -346,7 +348,7 @@ left: 0;
 
 
 
-  .list button{
+  .list input[type="submit"]{
    
     background-color: #4CAF50;
     color: white;
@@ -434,5 +436,25 @@ left: 0;
       background-color: #45a049;
     }
    
-      
-   
+    #search-results {
+      display: none;
+      position: absolute;
+      width:100%;
+      max-width:700px;
+      top: 590px;
+    
+      background-color: rgba(255,255,255,0.2);
+      padding: 10px;
+      border-radius: 5px;
+      max-height: 200px;
+      overflow-y: scroll;
+      border-radius: 4px;
+  }
+  #search-results.active {
+    display: block;
+    
+}
+#search-results a {
+    color: #000;
+    text-decoration: none;
+}

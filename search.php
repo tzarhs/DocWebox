@@ -33,7 +33,8 @@
     
     if(isset($_POST['submit'])){
         $loc = $_POST['location'];
-        $prof = $_POST['name'];
+        $prof = $_POST['profession'];
+        
         
 
     if(!empty($loc) && !empty($prof)){
@@ -91,18 +92,82 @@
         
       
         <td bgcolor="#DCDCDC">
-          <a href="appointment_form.php"><button name="appointment">Κλείστε ραντεβού</button></a><br>
+        <form action="appointment_form.php" method="POST">
+            <input type="hidden" name="doctor_name" value="<?=$row['doctor_name']?>">
+            <input type="submit" name="appointment" value="Κλείστε ραντεβού">
+          </form>
         </td>
         </tr>
+   
       
        <?php 
        echo "<br>";   
-        $_SESSION['doctor_name'] = $row['doctor_name'];
 	    }
       
 	mysqli_close($link);
     }
+    else {
+      $prof = $_GET['name'];
+
+      $query="SELECT profession.name,doctor.doctor_name,doctor.city,doctor.adress,
+      doctor.tel
+     FROM profession   
+     INNER JOIN doctor ON  profession.id = doctor.profession_id
+     WHERE profession.name='$prof' ";
+
+    $prof_result = mysqli_query($link, $query);
+    ?>
+       <table>
+	      <tr bgcolor="#DCDCDC">
+	  	  <td style="font-weight:bold">Όνομα</td>
+		    <td style="font-weight:bold">Τοποθεσία</td>
+        <td style="font-weight:bold">Ειδικότητα</td>
+        <td style="font-weight:bold">Οδός</td>
+        <td style="font-weight:bold">Τηλέφωνο</td>
+	      </tr>
+    <?php
+    while ($row = mysqli_fetch_array($prof_result)) {
+     
       ?>
+       <tr>
+          <td bgcolor="#DCDCDC">
+	      <?=$row['doctor_name']?>
+		    </td>
+
+        <td bgcolor="#DCDCDC">
+		    <?=$row['city']?>
+		    </td>
+        
+        <td bgcolor="#DCDCDC">
+		    <?=$row['name']?>
+		    </td>
+
+        <td bgcolor="#DCDCDC">
+		    <?=$row['adress']?>
+		    </td>
+
+        <td bgcolor="#DCDCDC">
+		    <?=$row['tel']?>
+		    </td>
+        
+      
+        <td bgcolor="#DCDCDC">
+        <form action="appointment_form.php" method="POST">
+            <input type="hidden" name="doctor_name" value="<?=$row['doctor_name']?>">
+            <input type="submit" name="appointment" value="Κλείστε ραντεβού">
+          </form>
+        </td>
+        </tr>
+
+        <?php 
+       echo "<br>";   
+	    }
+      
+	mysqli_close($link);
+    }
+   
+      ?>
+       </table>
     
   </div>
 
