@@ -34,6 +34,7 @@
             <li><a href="doctor_profile.php">Το Προφίλ μου</a></li>
         <?php
           }elseif($_SESSION['usertype'] == 'patient'){
+            $username = $_SESSION['username'];
         ?>
            <li><a href="patient_profile.php">Το Προφίλ μου</a></li>         
         <?php
@@ -50,39 +51,94 @@
 
     
 
-    <div class="container">
-
-    <div id="sidebar">
-      <header>Ειδικότητες</header>
+  <div class="container">
+      <div id="sidebar">
+        <header>Ειδικότητες</header>
       
-      <?php
-      include("connect.php");
-      $sql = "SELECT * FROM profession";
+        <?php
+          include("connect.php");
+          $sql = "SELECT * FROM profession";
               $result = mysqli_query($link, $sql);
               
               if (mysqli_num_rows($result) > 0) {
                 echo '<ul id="sidebar_data" name="sidebar_data" > ';
                 echo ' ';
                 while ($row = mysqli_fetch_assoc($result)) {
-                  echo '<li  value="' . $row['id'] . '"> <a href="search.php">' . $row['name'] . '</a></li>';
+                  echo '<li  value="' . $row['id'] . '"> <a href="search.php?name=' . $row['name'] . '">' . $row['name'] . '</a></li>';
                 }
                 echo '</ul>'; }
-                ?>
+      ?>
         
-      
 
-    </div>
+      </div>
    
+    <h1>Health is Wealth</h1>
 
 
-   
-      <form action="search.php" class="search-bar" method="POST">
-        <input type="text" placeholder="Ειδικότητα" name="profession">
-        <input type="text" placeholder="Περιοχή" name="location">
-        <button type="submit" name="submit"><img src="search.png"></button>
-      </form>
-    
-    </div>
+    <form action="search.php" class="search-bar" method="POST">
+  <input type="text" id="prof" placeholder="Ειδικότητα" name="profession" oninput="searchProfession()">
+  
+  <input type="text" id="loc" placeholder="Περιοχή" name="location" oninput="searchLocation()">
+     
+  <button type="submit" name="submit"><img src="search.png"></button>
+</form>
+
+<div id="search-results"></div>
+
+<script>
+    function searchProfession() {
+        var input = document.getElementById("prof").value;
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var searchResults = document.getElementById("search-results");
+                searchResults.innerHTML = this.responseText;
+                if (input.length > 0) {
+                    searchResults.classList.add("active");
+                    var resultElements = searchResults.getElementsByTagName("div");
+                    for (var i = 0; i < resultElements.length; i++) {
+                        resultElements[i].addEventListener("click", function() {
+                            document.getElementById("prof").value = this.innerHTML;
+                            searchResults.classList.remove("active");
+                        });
+                    }
+                } else {
+                    searchResults.classList.remove("active");
+                }
+            }
+        };
+        xhttp.open("GET", "search_profession.php?q="+input, true);
+        xhttp.send();
+    }
+    function searchLocation() {
+        var input = document.getElementById("loc").value;
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var searchResults = document.getElementById("search-results");
+                searchResults.innerHTML = this.responseText;
+                if (input.length > 0) {
+                    searchResults.classList.add("active");
+                    var resultElements = searchResults.getElementsByTagName("div");
+                    for (var i = 0; i < resultElements.length; i++) {
+                        resultElements[i].addEventListener("click", function() {
+                            document.getElementById("loc").value = this.innerHTML;
+                            searchResults.classList.remove("active");
+                        });
+                    }
+                } else {
+                    searchResults.classList.remove("active");
+                }
+            }
+        };
+        xhttp.open("GET", "search_location.php?q="+input, true);
+        xhttp.send();
+      }
+</script>
+
+
+
+  </div>
     
         <div class="footer">
             <div class="footer-heading footer-1">

@@ -53,6 +53,7 @@
                 $result1 = mysqli_query($link, $query1) or die("Query error: " . mysqli_error($link)); 
                 
                 header('location: doctor_profile.php?doctor_update=success');
+              
             /* Άμα ο χρήστης είναι γιατρός και δεν έχει αλλάξει τα στοιχεία του */     
             }else if ($_SESSION['id'] && $_SESSION['usertype'] == 'doctor') {
                 $gid=$_SESSION['id'];
@@ -130,7 +131,7 @@
                 $result5 = mysqli_query($link, $query5) or die("Query error: " . mysqli_error($link));
 
                 header('location: patient_profile.php?patient_update=success');
-
+                              
             /* Άμα ο χρήστης είναι ασθενής και δεν έχει αλλάξει τα στοιχεία του */     
             }else if ($_SESSION['id'] && $_SESSION['usertype'] == 'patient') {
               $gid=$_SESSION['id'];
@@ -158,7 +159,7 @@
                           </tr>
                            
                           <tr>
-                          <td id="edit-btn" colspan="2"><input name="submit-edit" type="submit"></td>
+                          <td id="edit-btn" colspan="2"><input name="submit1" type="submit"></td>
                           </tr>
                       </table>
                   </form>

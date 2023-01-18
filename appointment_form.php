@@ -28,18 +28,18 @@
   <?php
     include("connect.php");
     session_start();
-
+    $_SESSION['doctor_name'] = $_POST['doctor_name'];
+    /*$username = $_SESSION['username'];*/
     
   ?>
 
-    <div class="appointment">
-    <form action="book_appointment.php" method="POST">
+  <div class="appointment">
+  <form action="book_appointment.php" method="POST">
     Appointment day: <input type="date" name="appointment_date" required>
     Appointment time: <input type="time" name="appointment_time" required>
-    <input type="text" placeholder="Ονοματεπώνυμο" name="fullname" required>
+    <!--<input type="text" placeholder="Ονοματεπώνυμο" name="fullname" required>-->
     <input type="submit" name="submit">
-</form>
-
+  </form>
     </div>
   </body>
 </html>
