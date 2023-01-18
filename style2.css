@@ -654,7 +654,6 @@ a:hover,a.active{
   }
  }
 
-<<<<<<< HEAD
  
  #appointments {
   width: 50%;
@@ -686,14 +685,12 @@ a:hover,a.active{
   border-radius: 25px;
 }
 
-=======
  @media screen and (max-width:400px) {
   #center-content{
     height: 55rem;
   }
 }
   
->>>>>>> 09448bdddd3f45b6d81539eb0d1bf56afacb74e6
 
 
 
