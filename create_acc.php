@@ -13,6 +13,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Sign Up</title>
 </head>
+<style>
+  body{
+    min-height:120vh;
+  }
+</style>
+
 <body>
 
 <?php
@@ -20,6 +26,18 @@
       
       echo '<div class="alert alert-danger" role="alert" fade in>'.$_SESSION['alert_message_error'].'</div>';
       unset($_SESSION['alert_message_error']);
+  }
+
+  if (isset($_SESSION['alert_email_error'])) {
+      
+    echo '<div class="alert alert-danger" role="alert" fade in>'.$_SESSION['alert_email_error'].'</div>';
+    unset($_SESSION['alert_email_error']);
+ }
+
+  if (isset($_SESSION['alert_tel_error'])) {
+        
+    echo '<div class="alert alert-danger" role="alert" fade in>'.$_SESSION['alert_tel_error'].'</div>';
+    unset($_SESSION['alert_tel_error']);
   }
 
 ?>
@@ -52,9 +70,12 @@
         </div>
         <input type="text" id="username" name="username" placeholder="Full name" required>
         <input type="password" id="password" name="password" placeholder="Password" required>
-        <input type="text" id="email" name="email" placeholder="E-mail" required>
+        <input type="text" id="email" name="email" placeholder="E-mail" required >   
+        <input type="text" id="city" name="city" placeholder="City" style="display:none" >
+        <input type="text" id="address" name="address" placeholder="Address" style="display:none" >
+        <input type="text" id="tel" name="tel" placeholder="Telephone" style="display:none" >
 
-          <?php
+        <?php
               
               
               $sql = "SELECT * FROM profession";
@@ -73,14 +94,8 @@
            
           ?>
 
-
-     
-        <input type="text" id="city" name="city" placeholder="City" style="display:none" >
-        <input type="text" id="address" name="address" placeholder="Address" style="display:none" >
-        <input type="text" id="tek" name="tel" placeholder="Telephone" style="display:none" >
         <input type="submit" name="submit" value="Sign up">
         
-
         <a id="acc" href="login.php">Already have an account?</a>
 </form>
 

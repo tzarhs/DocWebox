@@ -7,8 +7,13 @@
     <link rel="stylesheet" href="style2.css">
     <title>Login</title>
 </head>
-<body>
+<style>
+  .box{
+    top: 55%;
+  }
+</style>
 
+<body>
 <nav>
       <input type="checkbox" id="check">
       <label for="check" class="checkbtn">

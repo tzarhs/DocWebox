@@ -43,6 +43,7 @@
             if (mysqli_num_rows($result) == 1) {
               $_SESSION['city'] = $row['city'];
               $_SESSION['address'] = $row['adress'];
+              $_SESSION['tel'] = $row['tel'];
 
               $prof_query="SELECT profession.name, doctor.id
                           FROM profession   
@@ -69,22 +70,29 @@
                     <tr id="trow-1">
                     <td class="tl-1"><div align="left" id="tb-name">Username:</div></td>
                     <td class="tl-4"> <?php echo '&nbsp;&nbsp;' . $_SESSION['username']; ?></td>
-                    </tr>                                
-                                        
-                    <tr id="trow-1">
-                    <td class="tl-1"><div align="left" id="tb-name">Profession:</div></td>   
-                    <td class="tl-4"> <?php echo '&nbsp;&nbsp;' . $_SESSION['profession']; ?></td>
-                    </tr>
-                                      
+                    </tr>     
+                    
                     <tr id="trow-1">
                     <td class="tl-1"><div align="left" id="tb-name">City:</div></td>                
                     <td class="tl-4"> <?php echo '&nbsp;&nbsp;' . $_SESSION['city']; ?></td>
                     </tr>
-
+                              
                     <tr id="trow-1">
                     <td class="tl-1"><div align="left" id="tb-name">Address:</div></td>                
                     <td class="tl-4"> <?php echo '&nbsp;&nbsp;' . $_SESSION['address']; ?></td>
                     </tr>
+
+                    <tr id="trow-1">
+                    <td class="tl-1"><div align="left" id="tb-name">Telephone:</div></td>                
+                    <td class="tl-4"> <?php echo '&nbsp;&nbsp;' . $_SESSION['tel']; ?></td>
+                    </tr>
+
+                    <tr id="trow-1">
+                    <td class="tl-1"><div align="left" id="tb-name">Profession:</div></td>   
+                    <td class="tl-4"> <?php echo '&nbsp;&nbsp;' . $_SESSION['profession']; ?></td>
+                    </tr>
+                                    
+                    
                   </table>
               </form>
                 </div>

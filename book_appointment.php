@@ -14,7 +14,7 @@ if(isset($_POST['submit'])){
     $result = mysqli_query($link,$query);
     $row = mysqli_fetch_assoc($result);
     if(!($row)){
-        echo "<script>alert('Πρέπει να συνδεθέιτε σαν χρήστης!'); 
+        echo "<script>alert('Πρέπει να συνδεθείτε σαν χρήστης!'); 
         window.location.href='login.php';</script>";
 
     }
