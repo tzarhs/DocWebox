@@ -161,7 +161,7 @@ nav{
 }
 
 label.logo img{
-  position: absolute;
+  position: relative;
   height: auto;
   width: 78px;
 }
@@ -632,7 +632,7 @@ a:hover,a.active{
 
  
  #appointments {
-  width: 45%;
+  width: 50%;
   margin: 0 auto;
 }
 
@@ -641,7 +641,6 @@ a:hover,a.active{
   text-align: center;
   margin-bottom: 40px;
   margin-top: 40px;
-
 }
 
 #appointments ul {
@@ -652,8 +651,6 @@ a:hover,a.active{
 #appointments li {
   
   text-align: center;
-  font-size: large;
-
   color: white;
   background-color: #22313F;
   border-radius:20px;
@@ -665,22 +662,5 @@ a:hover,a.active{
 }
 
 
-input[id="appointment_edit"]{
-  border: 0;
-  background: rgb(255, 255, 255,0.5);
-  display: block;
-  margin: 30px auto;
-  text-align: center;
-  border: 2px solid rgb(46, 162, 185);
-  padding: 10px 10px;
-  width: auto;
-  outline: none;
-  color: black ;
-  border-radius: 24px;
-  transition: 0.25s;
-}
 
-input[id="appointment_edit"]:hover{
-  background: #3385bc;
 
-}
