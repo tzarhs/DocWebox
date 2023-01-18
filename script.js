@@ -6,7 +6,8 @@ if (document.querySelector('input[name="select"]')) {
             document.getElementById("profession").style.display="block";  
             document.getElementById("city").style.display="block";   
             document.getElementById("address").style.display="block";   
-            document.getElementById("tel").style.display="block";                   
+            document.getElementById("tel").style.display="block";      
+             
         }else if(elem.id=="option1")   
         {
             document.getElementById("profession").style.display="none";

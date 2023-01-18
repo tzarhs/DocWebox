@@ -26,7 +26,7 @@ body {
 .box{
   padding: 65px;
   position: absolute;
-  top: 55%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
   background:rgba(255,255,255,0.3);
@@ -161,7 +161,7 @@ nav{
 }
 
 label.logo img{
-  position: absolute;
+  position: relative;
   height: auto;
   width: 78px;
 }
@@ -220,7 +220,6 @@ a.active,a:hover{
 
 #center-content{
   float:left;
-  height: 40rem;
   width:100%;
   margin:20px auto;
   justify-content: center;
@@ -338,7 +337,7 @@ input[type="text"], input[type="password"], .tl-data select{
   margin: 2px auto;
   text-align: center;
   padding: 5px 5px;
-  transition: 0.25s;
+  transition: 0.1s;
   -ms-box-sizing:content-box;
   -moz-box-sizing:content-box;
   -webkit-box-sizing:content-box; 
@@ -413,12 +412,17 @@ option{
   transition: 0.25s;
 }
 
+.alert{
+  margin-bottom: 0rem;
+}
+
 .alert-success{
   background-color: #dff0d8 !important;
   border: 3px solid #00ff00;
   font-size: 20px;
   text-align: center;
   font-weight: bold;
+  margin-bottom: 0rem;
  
 }
 
@@ -428,6 +432,7 @@ option{
   font-size: 20px;
   text-align: center;
   font-weight: bold;
+  margin-bottom: 0;
  
 }
 
@@ -625,7 +630,7 @@ a:hover,a.active{
     align-items: flex-start;
     flex-wrap: wrap;
     align-content: space-around;
-    height: 400px;
+    height: 300px;
    }
 
    #signup-info, #signup-st{
@@ -648,5 +653,13 @@ a:hover,a.active{
     height:50rem;
   }
  }
+
+ @media screen and (max-width:400px) {
+  #center-content{
+    height: 55rem;
+  }
+}
+  
+
 
 
