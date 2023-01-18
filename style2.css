@@ -512,7 +512,7 @@ a:hover,a.active{
 
 @media screen and (max-width: 1150px){
   .footer{
-      height: 40vh;
+      height: 25%;
   }
   }
   
@@ -645,7 +645,7 @@ a:hover,a.active{
    }
 
    #center-content{
-    height:60rem;
+    height:50rem;
   }
  }
 
