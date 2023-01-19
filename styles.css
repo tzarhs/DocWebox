@@ -114,12 +114,22 @@ justify-content: center;
 
 .container h1 {
   position: absolute;
-  top: 25%;
+  top: 18%;
   left: 0;
   width: 100%;
   text-align: center;
   font-size: 5vw;
   color: white;
+}
+
+.container h2 {
+  position: absolute;
+  top: 30%;
+  left:0;
+  width: 100%;
+  text-align: center;
+  font-size: 1vw;
+  color:#a0c7e4;
 }
 
 .search-bar{
@@ -457,4 +467,45 @@ left: 0;
 #search-results a {
     color: #000;
     text-decoration: none;
+}
+
+.about_us {
+  width:100%;
+ 
+min-height: 100vh;
+padding:5%;
+background-image: linear-gradient(rgba(12, 120, 139, 0.9),rgba(0,8,51,0.9)), url(wallpaper.jpg);
+background-position: center;
+background-size: cover;
+align-items: center;
+justify-content: center;
+text-align: center;
+font-size: 20px;
+}
+
+.about_us h1,h2 {
+   color:snow;
+   padding:5%;
+}
+
+.about_us .team {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+.about_us  .team li {
+        list-style: none;
+        flex-basis: 20%;
+        margin: 10px;
+        text-align: center;
+        color :#a0c7e4;
+      }
+      /* Add hover effect to team member names */
+.about_us  .team li:hover {
+        color: #008080;
+        cursor: pointer;
+      }
+    
+.about_us p {
+  color:#a0c7e4;
 }
