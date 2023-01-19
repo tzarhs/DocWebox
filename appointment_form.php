@@ -21,7 +21,7 @@
       <ul>
         <li><a class="active" href="#">Ειδικότητες</a></li>
         <li><a href="login.php">Σύνδεση/Εγγραφή</a></li>
-        <li><a href="#">Σχετικά με εμάς</a></li>
+        <li><a href="about_us.php">Σχετικά με εμάς</a></li>
       </ul>
     </nav>
 

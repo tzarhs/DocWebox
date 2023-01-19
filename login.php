@@ -23,7 +23,7 @@
         <a href="index.php"><img src="logo_doctor.png" alt="logo"></a>
       </label>
       <ul>
-        <li><a href="#">Σχετικά με εμάς</a></li>
+        <li><a href="about_us.php">Σχετικά με εμάς</a></li>
       </ul>
 </nav>
 
