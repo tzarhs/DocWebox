@@ -484,12 +484,30 @@ option{
     font-size: 16px;
   }
 }
+@media (min-width: 858px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+  }
+  nav ul {
+    display: flex;
+   
+  }
+
+  nav li {
+    margin-right: 10px;
+  }
+  #center-content {
+    margin-top:110px;
+  }
+}
 @media (max-width: 858px){
   .checkbtn{
     display: block;
   }
-ul{
-    position: fixed;
+nav ul{
+    position: absolute;
     width: 100%;
     height: 100vh;
     background: #2c3e50;
@@ -656,8 +674,12 @@ a:hover,a.active{
 
  
  #appointments {
-  width: 50%;
+  width: 100%;
+  max-width: 1000px;
   margin: 0 auto;
+}
+#appointments tr {
+  font-size: 20px;
 }
 
 #appointments h1 {
@@ -690,7 +712,25 @@ a:hover,a.active{
     height: 55rem;
   }
 }
+
+@media screen and (max-width:500px) {
+  #appointments tr{
+    font-size: 15px;
+  }
+}
+
+
+@media (min-width: 540px) {
+  nav {
   
+    z-index:1;
+  }
+}
 
+nav{
+  top:0;
+}
 
-
+#appointments {
+  margin-top: 120px;;
+}

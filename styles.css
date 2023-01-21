@@ -101,7 +101,7 @@ display: none;
 
 .container{
 width:100%;
-min-height: 100vh;
+min-height: 108vh;
 padding:5%;
 background-image: linear-gradient(rgba(12, 120, 139, 0.9),rgba(0,8,51,0.9)), url(wallpaper.jpg);
 background-position: center;
@@ -127,9 +127,16 @@ justify-content: center;
   top: 30%;
   left:0;
   width: 100%;
+ 
   text-align: center;
-  font-size: 1vw;
+  font-size: 20px;
   color:#a0c7e4;
+}
+
+@media (max-width: 540px) {
+  .container h2{
+    font-size: 15px;
+  }
 }
 
 .search-bar{
@@ -181,10 +188,12 @@ cursor:pointer;
   nav {
     display: flex;
     justify-content: space-between;
+    
   }
 
   nav ul {
     display: flex;
+   
   }
 
   nav li {
@@ -192,12 +201,20 @@ cursor:pointer;
   }
 }
 
+@media (max-width: 540px) {
+  nav {
+
+    position: absolute;
+    z-index:1;
+  }
+}
 
 
-@media (min-width: 768px) {
-  .container form {
+@media (min-width: 540px) {
+  .container {
     display: flex;
     justify-content: center;
+    z-index:0;
   }
 
   form input {
@@ -451,7 +468,7 @@ left: 0;
       position: absolute;
       width:100%;
       max-width:700px;
-      top: 590px;
+      top: 640px;
       cursor:pointer;
       background-color: rgba(255,255,255,0.2);
       padding: 10px;

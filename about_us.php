@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <title>Σχετικά με εμάς</title>
 
 </head>
@@ -40,6 +41,15 @@
         ?>
         </ul>
     </nav>
+    <style>
+    @media(max-width:540px){
+     nav{ 
+      position:static;
+     }
+    }
+      </style>
+
+    
 
     <div class="about_us">
     <h1>Σχετικά με εμάς</h1>
@@ -53,7 +63,7 @@
       <li>Γιάννης Σταμκόπουλος - ics20118</li>
       <li>Γιάννης Παρματάς - ics20090</li>
     </ul>
-    <h2>Επικοινωνίστε μαζί μας</h2>
+    <h2>Επικοινωνήστε μαζί μας</h2>
     <p>Για τυχών απορίες ή σχόλια, επικοινωνίστε μάζι μας στις διευθύνσεις email που αναγράφονται παραπάνω. </p>
     
 

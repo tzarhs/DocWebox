@@ -136,9 +136,6 @@
         xhttp.send();
       }
 </script>
-
-
-
   </div>
     
         <div class="footer">

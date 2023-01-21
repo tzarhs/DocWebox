@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <title>My appointments</title>
 </head>
 <body>
@@ -131,7 +132,7 @@
               <td><?php echo  $appointment['date'] ?></br><?php echo date('h:i a', strtotime($appointment['time'])) ?> </td>
               <td><?php echo  $data['tel'] ?> </td>
               <td>
-							<div class="dropdown open">
+							<div class="dropdown open" style="position: static">
 								<a href="#!" class="px-2" id="triggerId1" data-toggle="dropdown" aria-haspopup="true"
 										aria-expanded="false">
 											<i class="fa fa-ellipsis-v"></i>
