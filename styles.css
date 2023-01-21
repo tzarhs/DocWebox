@@ -64,7 +64,6 @@ display: none;
   position: absolute;
   left: -250px;
   width: 240px;
-  
   background: #041c2e;
   transition: 0.5s;
   top:90px;
@@ -146,7 +145,6 @@ background:rgba(255,255,255,0.2);
 display: flex;
 align-items: center;
 border-radius: 60px;
-
 }
 
 .search-bar input
@@ -317,9 +315,7 @@ left: 0;
 .footer-1{
      display: none;
 }
-#sidebar{
-  top: 80px;
-}
+
 }
 
 
@@ -327,9 +323,7 @@ left: 0;
 .footer-3{
   padding-top: 1rem;
 }
-#sidebar{
-  top: 80px;
-}
+
 }
 
 .list{
@@ -406,6 +400,12 @@ left: 0;
           font-size: 0.8em;
       }
   }
+
+  @media screen and (max-width: 1200px) {
+    #sidebar{
+      
+    }
+  }
   
     .appointment {
       width:100%;
@@ -477,34 +477,33 @@ left: 0;
 
 .about_us {
   width:100%;
- 
-min-height: 100vh;
-padding:5%;
-background-image: linear-gradient(rgba(12, 120, 139, 0.9),rgba(0,8,51,0.9)), url(wallpaper.jpg);
-background-position: center;
-background-size: cover;
-align-items: center;
-justify-content: center;
-text-align: center;
-font-size: 20px;
+  min-height: 100vh;
+  padding:5%;
+  background-image: linear-gradient(rgba(12, 120, 139, 0.9),rgba(0,8,51,0.9)), url(wallpaper.jpg);
+  background-position: center;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
 }
 
 .about_us h1,h2 {
-   color:snow;
-   padding:5%;
+  color:snow;
+  padding:5%;
 }
 
 .about_us .team {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 .about_us  .team li {
-        list-style: none;
-        flex-basis: 20%;
-        margin: 10px;
-        text-align: center;
-        color :#a0c7e4;
+  list-style: none;
+  flex-basis: 20%;
+  margin: 10px;
+  text-align: center;
+  color :#a0c7e4;
       }
       /* Add hover effect to team member names */
 .about_us  .team li:hover {
@@ -515,3 +514,4 @@ font-size: 20px;
 .about_us p {
   color:#a0c7e4;
 }
+
