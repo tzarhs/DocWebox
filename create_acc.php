@@ -73,7 +73,7 @@
         <input type="text" id="email" name="email" placeholder="E-mail" required >   
         <input type="text" id="city" name="city" placeholder="City" style="display:none" >
         <input type="text" id="address" name="address" placeholder="Address" style="display:none" >
-        <input type="text" id="tel" name="tel" placeholder="Telephone" style="display:none" >
+        <input type="text" id="tel" name="tel" placeholder="Telephone 55-5555-5555" style="display:none" >
 
         <?php
               

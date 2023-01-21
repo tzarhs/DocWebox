@@ -151,8 +151,6 @@ color: rgba(0, 0, 0, 0.7);
 
 }
 
-/*-----------------------*/
-
 
 nav{
   background: #0082e6;
@@ -445,7 +443,6 @@ option{
   bottom: 0;
   font-size: 16px;
   width: 100%;
-  height: 20vh;
   padding: 50px;
   background: #0082e6;
   color: aliceblue;
