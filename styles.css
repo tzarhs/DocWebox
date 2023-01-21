@@ -67,7 +67,8 @@ display: none;
   
   background: #041c2e;
   transition: 0.5s;
-  top:80px;
+  top:90px;
+  bottom: 50px;
 }
 
 #sidebar header {
@@ -89,6 +90,11 @@ display: none;
   padding-left: 15px;
   border-top: 1px solid rgba(255,255,255,0.1);
   border-bottom: 1px solid black;
+}
+
+#sidebar li{
+  padding-top: 2px;
+  padding-bottom: 5px;
 }
 
 #sidebar.active {
