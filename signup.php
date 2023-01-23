@@ -53,7 +53,7 @@ if (isset( $_POST['submit'])) {
                                 header('location: create_acc.php?login=failed');
                                 exit;
                         }else{
-                                mysqli_query($link,"INSERT INTO doctor(profession_id, city, doctor_name, password, adress, tel)
+                                mysqli_query($link,"INSERT INTO doctor(profession_id, city, doctor_name, password, address, tel)
                                 VALUES ('$profession','$city', '$username', '$password', '$address', '$tel')");
                                 $_SESSION['logged_in'] = true;
                                 $_SESSION['username'] = $username;

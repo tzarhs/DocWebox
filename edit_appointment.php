@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="css/style2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <title>Edit appointment</title>
 </head>
@@ -22,7 +22,7 @@
         <i class="fas fa-bars"></i>
       </label>
       <label class="logo">
-        <a href="index.php"><img src="logo_doctor.png" alt="logo"></a>
+        <a href="index.php"><img src="images/logo_doctor.png" alt="logo"></a>
       </label>
       <ul>
         <li><a href="appointments.php">Τα ραντεβού μου</a></li>

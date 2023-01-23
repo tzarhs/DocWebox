@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <title>DocWebox-Οι καλύτεροι γιατροί στην διάθεση σου!</title>
 </head>
@@ -21,7 +21,7 @@
         <i class="fas fa-bars"></i>
       </label>
       <label class="logo">
-        <a href="index.php"><img src="logo_doctor.png"></a>
+        <a href="index.php"><img src="images/logo_doctor.png"></a>
       </label>
       <ul>
         <li><a href="#sidebar" id="toggle">Ειδικότητες</a></li>
@@ -81,7 +81,7 @@
   
   <input type="text" id="loc" placeholder="Περιοχή" name="location" oninput="searchLocation()">
      
-  <button type="submit" name="submit"><img src="search.png"></button>
+  <button type="submit" name="submit"><img src="images/search.png"></button>
 </form>
 
 <div id="search-results"></div>

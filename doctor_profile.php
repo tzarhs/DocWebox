@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="css/style2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <title>My Profile</title>
 </head>
@@ -21,7 +21,7 @@
         <i class="fas fa-bars"></i>
       </label>
       <label class="logo">
-        <a href="index.php"><img src="logo_doctor.png" alt="logo"></a>
+        <a href="index.php"><img src="images/logo_doctor.png" alt="logo"></a>
       </label>
       <ul>
         <li><a href="appointments.php">Τα ραντεβού μου</a></li>
@@ -43,7 +43,7 @@
           while($row=mysqli_fetch_array($result)){
             if (mysqli_num_rows($result) == 1) {
               $_SESSION['city'] = $row['city'];
-              $_SESSION['address'] = $row['adress'];
+              $_SESSION['address'] = $row['address'];
               $_SESSION['tel'] = $row['tel'];
 
               $prof_query="SELECT profession.name, doctor.id

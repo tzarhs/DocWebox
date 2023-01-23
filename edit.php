@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="css/style2.css">
     <title>Edit Profile</title>
 </head>
 
@@ -21,7 +21,7 @@
         <i class="fas fa-bars"></i>
       </label>
       <label class="logo">
-        <a href="index.php"><img src="logo_doctor.png" alt="logo"></a>
+        <a href="index.php"><img src="images/logo_doctor.png" alt="logo"></a>
       </label>
       <ul>
         <li><a href="appointments.php">Τα ραντεβού μου</a></li>
@@ -48,7 +48,7 @@
                 $profession_id = $_POST['profession_id'];
 
 
-                $query1 = "UPDATE doctor set doctor_name='$username', password = '$password', profession_id='$profession_id', city='$city', adress = '$address'
+                $query1 = "UPDATE doctor set doctor_name='$username', password = '$password', profession_id='$profession_id', city='$city', address = '$address'
                           WHERE id = '$id'";                
                 $result1 = mysqli_query($link, $query1) or die("Query error: " . mysqli_error($link)); 
                 
@@ -58,7 +58,7 @@
             }else if ($_SESSION['id'] && $_SESSION['usertype'] == 'doctor') {
                 $gid=$_SESSION['id'];
                           
-                $result3 = mysqli_query($link,"SELECT doctor.doctor_name, profession.name, profession.id, doctor.city, doctor.password, doctor.adress
+                $result3 = mysqli_query($link,"SELECT doctor.doctor_name, profession.name, profession.id, doctor.city, doctor.password, doctor.address
                                                 FROM profession   
                                                 INNER JOIN doctor ON profession.id = doctor.profession_id
                                                 WHERE doctor.id = '$gid'");
