@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/> -->
+    <link rel="stylesheet" href="css/styles.css">
     <title>DocWebox-Οι καλύτεροι γιατροί στην διάθεση σου!</title>
 </head>
 
@@ -16,7 +15,7 @@
         <i class="fas fa-bars"></i>
       </label>
       <label class="logo">
-        <a href="index.php"><img src="logo_doctor.png"></a>
+        <a href="index.php"><img src="images/logo_doctor.png"></a>
       </label>
       <ul>
         <li><a class="active" href="#">Ειδικότητες</a></li>
@@ -38,14 +37,14 @@
         
 
     if(!empty($loc) && !empty($prof)){
-        $query="SELECT profession.name,doctor.doctor_name,doctor.city,doctor.adress,
+        $query="SELECT profession.name,doctor.doctor_name,doctor.city,doctor.address,
         doctor.tel
         FROM profession   
         INNER JOIN doctor ON  profession.id = doctor.profession_id
         WHERE doctor.city='$loc' AND profession.name='$prof' ";
     } else {
       
-         $query="SELECT profession.name,doctor.doctor_name,doctor.city,doctor.adress,
+         $query="SELECT profession.name,doctor.doctor_name,doctor.city,doctor.address,
          doctor.tel
         FROM profession   
         INNER JOIN doctor ON  profession.id = doctor.profession_id
@@ -83,7 +82,7 @@
 		    </td>
 
         <td bgcolor="#DCDCDC">
-		    <?=$row['adress']?>
+		    <?=$row['address']?>
 		    </td>
 
         <td bgcolor="#DCDCDC">
@@ -109,7 +108,7 @@
     else {
       $prof = $_GET['name'];
 
-      $query="SELECT profession.name,doctor.doctor_name,doctor.city,doctor.adress,
+      $query="SELECT profession.name,doctor.doctor_name,doctor.city,doctor.address,
       doctor.tel
      FROM profession   
      INNER JOIN doctor ON  profession.id = doctor.profession_id
@@ -143,7 +142,7 @@
 		    </td>
 
         <td bgcolor="#DCDCDC">
-		    <?=$row['adress']?>
+		    <?=$row['address']?>
 		    </td>
 
         <td bgcolor="#DCDCDC">
