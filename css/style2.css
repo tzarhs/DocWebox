@@ -9,7 +9,7 @@
 body {  
   font-family: sans-serif;
   width:100%;
-  background-image: linear-gradient(rgba(12, 120, 139, 0.9),rgba(0,8,51,0.9)), url(images/wallpaper.png);
+  background-image: linear-gradient(rgba(12, 120, 139, 0.9),rgba(0,8,51,0.9)), url(../images/wallpaper.png);
   min-height: 100vh;
   background-position: center;
   background-size: cover;
@@ -439,28 +439,30 @@ option{
   }
   
 .footer {
-  position:relative;
+  position: relative;
   bottom: 0;
   font-size: 16px;
   width: 100%;
-  padding: 50px;
+  
   background: #0082e6;
   color: aliceblue;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+
 }
 
 .footer-heading {
   display: flex;
   flex-direction: column;
   margin-right: 4rem;
-  font-size: 16px;
+  margin-left:4rem;
+  
   }
   
 .footer-heading h3 {
   font-weight: 700;
   margin-bottom: 4rem;
+  margin-top: 4rem;
   
   }
   

@@ -176,13 +176,12 @@
 </br>
 
 
-<div class="footer">
+<div class="footer" style="position: absolute">
       <div class="footer-heading footer-1">
           <a href="#"><h3>DocWebox &copy;2022</h3></a></div>
       <div class="footer-heading footer-2">
           <h3>Σχετικά με εμάς</h3>
-          <a href="#">Η Εταιρία μας</a>
-          <a href="#">Η Ομάδα μας</a></div>
+         </div>
       <div class="footer-heading footer-3">
            <h3><a href="#">Πολιτική Απορρήτου</a></h3></div>
       <div class="footer-heading footer-3">

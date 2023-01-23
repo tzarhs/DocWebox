@@ -108,7 +108,7 @@ display: none;
 width:100%;
 min-height: 108vh;
 padding:5%;
-background-image: linear-gradient(rgba(12, 120, 139, 0.9),rgba(0,8,51,0.9)), url(images/wallpaper.png);
+background-image: linear-gradient(rgba(12, 120, 139, 0.9),rgba(0,8,51,0.9)), url(../images/wallpaper.png);
 background-position: center;
 background-size: cover;
 display:flex;
@@ -236,12 +236,11 @@ position:relative;
 bottom: 0;
 font-size: 16px;
 width: 100%;
-padding: 50px;
+
 background: #0082e6;
 color: aliceblue;
 display: flex;
 justify-content: center;
-flex-wrap: wrap;
 
 }
 
@@ -249,11 +248,13 @@ flex-wrap: wrap;
 display: flex;
 flex-direction: column;
 margin-right: 4rem;
+margin-left:4rem;
 }
 
 .footer-heading h3 {
 font-weight: 700;
 margin-bottom: 4rem;
+margin-top: 4rem;
 
 }
 
@@ -338,18 +339,13 @@ left: 0;
 }
 
 
-@media screen and (max-width: 547px){
-.footer-3{
-  padding-top: 1rem;
-}
 
-}
 
 .list{
   width:100%;
   min-height: 100vh;
   padding:5%;
-  background-image: linear-gradient(rgba(12, 120, 139, 0.9),rgba(0,8,51,0.9)), url(images/wallpaper.jpg);
+  background-image: linear-gradient(rgba(12, 120, 139, 0.9),rgba(0,8,51,0.9)), url(../images/wallpaper.png);
   background-position: center;
   background-size: cover;
   
@@ -430,7 +426,7 @@ left: 0;
       width:100%;
       min-height: 100vh;
       padding:5%;
-      background-image: linear-gradient(rgba(12, 120, 139, 0.9),rgba(0,8,51,0.9)), url(images/wallpaper.png);
+      background-image: linear-gradient(rgba(12, 120, 139, 0.9),rgba(0,8,51,0.9)), url(../images/wallpaper.png);
       background-position: center;
       background-size: cover;
       display:flex;
@@ -498,7 +494,7 @@ left: 0;
   width:100%;
   min-height: 100vh;
   padding:5%;
-  background-image: linear-gradient(rgba(12, 120, 139, 0.9),rgba(0,8,51,0.9)), url(images/wallpaper.png);
+  background-image: linear-gradient(rgba(12, 120, 139, 0.9),rgba(0,8,51,0.9)), url(../images/wallpaper.png);
   background-position: center;
   background-size: cover;
   align-items: center;

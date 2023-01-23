@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <title>DocWebox-Οι καλύτεροι γιατροί στην διάθεση σου!</title>
 </head>
@@ -142,9 +142,7 @@
             <div class="footer-heading footer-1">
                 <a href="#"><h3>DocWebox &copy;2022</h3></a></div>
             <div class="footer-heading footer-2">
-                <h3>Σχετικά με εμάς</h3>
-                <a href="about_us.php">Η Εταιρία μας</a>
-                <a href="about_us.php">Η Ομάδα μας</a></div>
+                <a href="about_us.php"><h3>Σχετικά με εμάς</h3></a></div>
             <div class="footer-heading footer-3">
                 <h3><a href="#">Πολιτική Απορρήτου</a></h3></div>
             <div class="footer-heading footer-3">
